@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>lucavanrøssem — hard techno DJ &amp; producer · Ghent, Belgium</title>
+<meta name="description" content="Hailing from Ghent, Belgium, lucavanrøssem fuses hard techno with hardcore and raw neo rave influences, turning every stage into pure controlled chaos. Co-founder of Sinners Culture and Sinners Records.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="lucavanrøssem — hard techno DJ &amp; producer">
+<meta property="og:description" content="Hard techno × hardcore × raw neo rave. Ghent, Belgium. Sinners Records.">
+<meta property="og:image" content="assets/photos/luca-portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="assets/sinners-mark-chrome.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/video/hero-lite.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="assets/fonts/sinners-display-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sinners-display-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sinners-display-semibold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sinners-display-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/video/sinners-spin-lite.jpg" as="image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "lucavanrøssem",
+  "description": "Hard techno DJ and producer from Ghent, Belgium, fusing hard techno with hardcore and raw neo rave. Co-founder of Sinners Culture and Sinners Records.",
+  "genre": ["Hard techno", "Hardcore", "Neo rave"],
+  "foundingLocation": { "@type": "Place", "name": "Ghent, Belgium" },
+  "image": "assets/photos/luca-portrait.jpg",
+  "email": "contact@skorm-agency.com",
+  "sameAs": [
+    "https://www.instagram.com/lucavanrossem",
+    "https://www.tiktok.com/@lucavanrossem",
+    "https://open.spotify.com/artist/6fvw8MYBJoUxH19afLOY3k",
+    "https://soundcloud.com/young-lostsoul",
+    "https://www.facebook.com/lucavanrossem"
+  ]
+}
+</script>
+
+<style>
+/* ---------- font: Sinners Display (SIL OFL — see assets/fonts) ---------- */
+@font-face{font-family:"Sinners Display";src:url("assets/fonts/sinners-display-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:block}
+@font-face{font-family:"Sinners Display";src:url("assets/fonts/sinners-display-semibold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:block}
+@font-face{font-family:"Sinners Display";src:url("assets/fonts/sinners-display-bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block}
+@font-face{font-family:"Sinners Display";src:url("assets/fonts/sinners-display-black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:block}
+
+/* ---------- tokens: the Sinners Culture palette — black, white, steel grey, a little red ---------- */
+:root{
+  --ink:#000000;
+  --ink-2:#0a0a0a;
+  --ink-3:#121212;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.18);
+  --white:#ffffff;
+  --text:#e8e8e8;
+  --dim:rgba(255,255,255,.66);
+  --grey:#8f8f8f;
+  --steel:#a0a0a0;
+  --red:#c8140a;
+  --red-glow:rgba(200,20,10,.55);
+  --chrome:linear-gradient(180deg,#ffffff 0%,#ececec 32%,#b9b9b9 50%,#9a9a9a 56%,#d2d2d2 74%,#f5f5f5 100%);
+  --gutter:clamp(16px,4vw,48px);
+  --font:"Sinners Display",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mark:url("assets/sinners-mark-chrome.svg");
+  color-scheme:dark;
+  --vh:100vh;
+}
+@supports (height:100svh){:root{--vh:100svh}}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;background:#000}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video,iframe{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:2px solid var(--white);outline-offset:3px}
+section[id]{scroll-margin-top:68px}
+.wrap{width:min(1180px,calc(100% - 2 * var(--gutter)));margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.is-broken{visibility:hidden}
+.nm{text-transform:none;letter-spacing:.03em}  /* the artist name stays lowercase inside uppercase labels */
+.label{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;line-height:1.5}
+.mark{display:inline-block;width:22px;height:30px;background:var(--mark) center/contain no-repeat;flex:none}
+.ico{width:18px;height:18px;fill:currentColor;flex:none}
+.arr{width:12px;height:12px;flex:none;transition:transform .2s}
+
+/* chrome type, after the SINNERS gunmetal wordmark */
+.chrome{color:var(--white)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .chrome{background:var(--chrome);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+}
+/* chrome hairline borders and steel glow, as on the store */
+.chrome-edge{border:1px solid transparent!important;background:linear-gradient(var(--card,#0a0a0a),var(--card,#0a0a0a)) padding-box,linear-gradient(155deg,rgba(255,255,255,.36),rgba(120,120,120,.10) 32%,rgba(220,220,220,.26) 62%,rgba(70,70,70,.14)) border-box}
+
+/* ---------- dot field (ported from the Sinners Culture store) ---------- */
+.dotfield-host{position:relative;isolation:isolate}
+.dotfield{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;mix-blend-mode:lighten}
+.dotfield-host > :not(.dotfield){position:relative;z-index:1}
+
+/* ---------- buttons (white solid, or black with a steel glow and the red radar sweep) ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;overflow:hidden;padding:13px 22px;border:1px solid var(--line-2);border-radius:14px;background:transparent;font-family:var(--font);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--white);cursor:pointer;transition:border-color .2s,background .2s,box-shadow .3s;white-space:nowrap}
+.btn:hover{border-color:var(--steel)}
+.btn:hover .arr{transform:translate(2px,-2px)}
+.btn--solid{background:var(--white);border-color:var(--white);color:#000}
+.btn--solid:hover{background:#e0e0e0;border-color:#e0e0e0}
+.btn--sonar{background:#000;border:2px solid var(--steel);box-shadow:0 0 10px rgba(160,160,160,.5)}
+.btn--sonar:hover{box-shadow:0 0 18px var(--red-glow)}
+.btn--sonar canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.btn--sonar span,.btn--sonar svg{position:relative;z-index:1}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btns--center{justify-content:center}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;gap:28px;padding:calc(14px + env(safe-area-inset-top, 0px)) var(--gutter) 14px;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.nav.is-scrolled{background:rgba(0,0,0,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav__brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.02em;color:var(--white)}
+.nav__links{display:flex;gap:28px;margin-left:auto}
+.nav__links a{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--grey);transition:color .2s}
+.nav__links a:hover{color:var(--white)}
+.nav__book{padding:10px 18px}
+.nav__toggle{display:none;margin-left:auto;background:none;border:1px solid var(--line-2);border-radius:14px;padding:9px 16px;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+@media (max-width:900px){
+  .nav__links,.nav__book{display:none}
+  .nav__toggle{display:inline-flex}
+}
+.menu{position:fixed;inset:0;z-index:60;background:var(--ink);display:flex;flex-direction:column;padding:calc(14px + env(safe-area-inset-top, 0px)) var(--gutter) calc(40px + env(safe-area-inset-bottom, 0px))}
+.menu[hidden]{display:none}
+.menu__top{display:flex;align-items:center;justify-content:space-between}
+.menu__links{display:flex;flex-direction:column;gap:18px;margin:auto 0;text-align:center}
+.menu__links a{font-size:clamp(22px,7vw,32px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;background:var(--ink)}
+.hero__video{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;filter:saturate(.4) contrast(1.08) brightness(.5)}
+.hero__shade{position:absolute;inset:0;z-index:-2;background:radial-gradient(ellipse 70% 60% at 50% 48%,rgba(0,0,0,.15),rgba(0,0,0,.72) 100%),linear-gradient(to top,var(--ink) 2%,transparent 30%)}
+.hero__wave{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none;opacity:.7}
+.hero__inner{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:100px var(--gutter) 40px;text-align:center}
+.hero__spin{width:clamp(96px,10vw,140px);height:auto;aspect-ratio:1;mix-blend-mode:screen;margin-bottom:-6px}
+.hero__name{margin:0;font-size:clamp(34px,6.4vw,96px);font-weight:900;letter-spacing:.01em;line-height:1.05;padding-bottom:.06em;filter:drop-shadow(0 0 26px rgba(255,255,255,.16))}
+.hero__genre{margin:0 0 12px;color:var(--dim)}
+.hero__genre span{white-space:nowrap}
+.hero__foot{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:0 var(--gutter) calc(26px + env(safe-area-inset-bottom, 0px))}
+.hero__foot a,.hero__foot span{color:var(--dim);text-decoration:none}
+.hero__foot a:hover{color:var(--white)}
+.hero__foot > :last-child{justify-self:end}
+.hero__live{display:inline-flex;align-items:center;gap:10px}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red-glow);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35;transform:scale(.7)}}
+.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-cue i{display:block;width:1px;height:28px;background:linear-gradient(var(--white),transparent);animation:cue 2s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media (max-width:760px){
+  .hero__inner{padding:64px var(--gutter) 96px}
+  .hero__genre{font-size:10px;letter-spacing:.12em}
+  .hero__foot{grid-template-columns:1fr 1fr;font-size:10px;letter-spacing:.16em}
+  .scroll-cue,.hide-sm{display:none}
+}
+
+/* ---------- stats ---------- */
+.stats{border-block:1px solid var(--line)}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:clamp(22px,2.6vw,30px) 12px;border-left:1px solid var(--line);text-align:center}
+.stat:first-child{border-left:0}
+.stat__num{font-size:clamp(24px,2.6vw,36px);font-weight:900;letter-spacing:.02em;line-height:1.1;padding-bottom:.05em}
+.stat__label{margin-top:8px;color:var(--grey)}
+@media (max-width:760px){
+  .stats__grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+/* ---------- sections ---------- */
+.section{padding:clamp(56px,11vh,120px) 0}
+.section + .section{background-image:linear-gradient(90deg,transparent,rgba(210,210,210,.3),transparent);background-size:100% 1px;background-repeat:no-repeat}
+.head{margin:0 0 clamp(22px,4.5vh,52px);text-align:center}
+.h2{margin:0;font-size:clamp(18px,2.1vw,28px);font-weight:700;letter-spacing:.18em;text-transform:uppercase;line-height:1.3;padding-bottom:.08em;text-wrap:balance}
+.head__sub{margin:12px 0 0;color:var(--grey)}
+.section__more{display:flex;justify-content:center;margin-top:clamp(32px,4vw,48px)}
+
+/* ---------- music ---------- */
+.releases{--rel:min(560px,calc(var(--vh) - 355px));display:grid;grid-template-columns:repeat(2,minmax(0,max(260px,var(--rel))));justify-content:center;gap:clamp(24px,3.4vw,48px)}
+.release__art{--card:#0a0a0a;position:relative;aspect-ratio:1;max-width:100%;overflow:hidden;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 24px rgba(160,160,160,.08)}
+.release__art img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.release__art:hover img{transform:scale(1.025)}
+.release__art iframe{width:100%;height:100%;border:0}
+.play{position:absolute;z-index:2;right:14px;bottom:14px;display:inline-flex;align-items:center;padding:5px;border:0;border-radius:999px;background:rgba(0,0,0,.74);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--white);cursor:pointer;transition:background .2s}
+.play:hover{background:rgba(0,0,0,.92)}
+.play__icon{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--white);color:#000}
+.play__icon svg{width:13px;height:13px;margin-left:2px}
+.release{container-type:inline-size}
+.release__body{padding-top:18px}
+.release__top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;white-space:nowrap}
+.pill{display:inline-block;padding:4px 10px;border-radius:14px;background:var(--white);color:#000}
+.pill--ghost{background:transparent;color:var(--grey);border:1px solid var(--line-2)}
+.release__stat{color:var(--grey)}
+.release__stat b{font-weight:700;color:var(--white)}
+.release__title{margin:0 0 6px;font-size:clamp(15px,6.2cqi,24px);white-space:nowrap;font-weight:700;letter-spacing:.06em;line-height:1.25;text-transform:uppercase}
+.release__meta{margin:0 0 14px;color:var(--grey)}
+.release__links{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:8px}
+.release__links .btn{gap:8px;padding:11px 10px;letter-spacing:.08em;font-size:10px}
+.release__links .ico{width:15px;height:15px}
+@container (max-width:400px){.release__links .btn span{display:none}.release__links .ico{width:17px;height:17px}}
+
+.subhead{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:clamp(40px,8vh,96px) 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.subhead h3{margin:0;color:var(--grey);font-weight:600}
+.subhead a{display:inline-flex;align-items:center;gap:8px;color:var(--grey);text-decoration:none}
+.subhead a:hover{color:var(--white)}
+.covers{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(14px,1.8vw,24px)}
+.cv{display:block;text-decoration:none}
+.cv__art{--card:#0a0a0a;display:block;position:relative;aspect-ratio:1;max-width:100%;overflow:hidden;border-radius:4px}
+.cv__art img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s}
+.cv__go{position:absolute;inset:auto 10px 10px auto;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#fff;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.cv:hover .cv__art img{transform:scale(1.04);filter:brightness(1.08)}
+.cv:hover .cv__go,.cv:focus-visible .cv__go{opacity:1;transform:none}
+.cv__title{display:block;margin-top:12px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.35;color:var(--white)}
+.cv__sub{display:block;margin-top:4px;font-size:12px;line-height:1.5;color:var(--grey)}
+.cv__tag{display:inline-block;margin-top:8px;padding:3px 9px;border:1px solid var(--line-2);border-radius:14px;font-size:9.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+@media (max-width:1000px){
+  /* one swipeable row instead of stacked rows, so the whole block stays on screen */
+  .covers{display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin-inline:calc(-1 * var(--gutter));padding:0 var(--gutter) 6px;scroll-padding-inline:var(--gutter)}
+  .covers::-webkit-scrollbar{display:none}
+  .covers > li{flex:0 0 27%;scroll-snap-align:start}
+}
+@media (max-width:640px){.covers > li{flex-basis:42%}}
+@media (max-width:760px){.releases{grid-template-columns:minmax(0,max(240px,calc(var(--vh) - 345px)))}}
+
+/* ---------- live experience ---------- */
+.set{--card:#090909;margin:0;border-radius:12px;overflow:hidden}
+.set__bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;border-bottom:1px solid var(--line);color:var(--grey)}
+.set__bar b{font-weight:700;color:var(--white)}
+.set svg{display:block;width:100%;height:auto;aspect-ratio:1040/305;max-height:calc(var(--vh) - 430px)}
+.set__axis{display:flex;justify-content:space-between;padding:2px 1.92% 14px;color:var(--grey)}
+.set .grid line{stroke:rgba(255,255,255,.05);stroke-width:1}
+.set .trend{stroke:rgba(255,255,255,.22);stroke-width:1.2;stroke-dasharray:4 7;fill:none}
+.set .curve{fill:none;stroke:var(--red);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px var(--red-glow))}
+.set .area{fill:url(#energyFill)}
+.set .axis{fill:var(--grey);font-family:var(--font);font-size:12px;font-weight:600;letter-spacing:.16em}
+html.js .set .curve{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 2.4s cubic-bezier(.45,.05,.2,1)}
+html.js .set .area{opacity:0;transition:opacity .9s ease 1.1s}
+html.js .set.is-drawn .curve{stroke-dashoffset:0}
+html.js .set.is-drawn .area{opacity:1}
+.set__text{margin:0;padding:clamp(16px,2.6vh,26px) clamp(16px,4vw,48px);border-top:1px solid var(--line);font-size:clamp(13.5px,calc(.5vw + .9vh),15.5px);line-height:1.75;color:var(--dim);text-align:center}
+.set__text span{display:block;max-width:70ch;margin:0 auto}
+.set__text em{font-style:normal;color:var(--white)}
+
+.live__grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(40px,6vw,88px);margin-top:clamp(56px,6vw,80px)}
+.venues{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.venues li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.venues b{font-size:clamp(16px,1.6vw,21px);font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.25;color:var(--white)}
+.venues .label{margin-left:auto;color:var(--grey);white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.venues a.label{color:var(--white)}
+.venues a.label svg{width:10px;height:10px;fill:currentColor}
+.venues .intl::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--red)}
+.support{margin:0 0 36px;font-size:clamp(15px,1.4vw,19px);line-height:1.6;font-weight:700;letter-spacing:.04em;color:var(--white)}
+.support b{font-weight:700;white-space:nowrap}
+.support span{color:var(--grey);font-weight:400}
+.dates{--card:#080808;padding:20px;border-radius:12px}
+.dates p{margin:0 0 16px;color:var(--dim)}
+.dates .label{margin-bottom:8px;color:var(--grey)}
+@media (max-width:900px){.live__grid{grid-template-columns:1fr}}
+
+/* ---------- videos ---------- */
+.reel{display:grid;grid-template-columns:minmax(0,min(70%,calc((var(--vh) - 320px) * 1.7778))) minmax(240px,1fr);gap:16px;align-items:stretch;justify-content:center}
+.reel__stage{--card:#000;position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;border-radius:10px}
+.reel__stage video{width:100%;height:100%;object-fit:cover;background:#000}
+.reel__play{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:space-between;gap:16px;padding:clamp(16px,2.2vw,26px);border:0;background:linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,0) 55%);cursor:pointer;text-align:left}
+.reel__play .icon{display:grid;place-items:center;flex:none;width:clamp(52px,5vw,64px);aspect-ratio:1;border-radius:50%;background:var(--white);color:#000;transition:transform .2s}
+.reel__play:hover .icon{transform:scale(1.06)}
+.reel__play .icon svg{width:16px;height:16px;margin-left:3px}
+.reel__cap b{display:block;margin-top:6px;font-size:clamp(18px,2vw,26px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;color:var(--white)}
+.reel__cap .label{color:var(--dim)}
+.reel__stage.is-playing .reel__play{display:none}
+.reel__list{list-style:none;margin:0;padding:0 4px 0 0;display:grid;align-content:start;gap:6px;contain:size;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#333 transparent}
+.reel__item{display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center;width:100%;padding:6px;border:1px solid transparent;border-radius:10px;background:none;text-align:left;cursor:pointer;transition:background .2s,border-color .2s}
+.reel__item:hover{background:var(--ink-2)}
+.reel__item.is-active{background:var(--ink-2);border-color:var(--line-2)}
+.reel__item img{width:84px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px;filter:saturate(.6)}
+.reel__item .t{display:block;font-weight:700;font-size:13px;letter-spacing:.04em;line-height:1.3;color:var(--white)}
+.reel__item .d{display:block;margin-top:4px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+.reel__item.is-active .t::before{content:"";display:inline-block;width:6px;height:6px;margin-right:8px;border-radius:50%;background:var(--red);vertical-align:2px}
+@media (max-width:900px){
+  .reel{grid-template-columns:1fr}
+  .reel__stage{width:min(100%,calc((var(--vh) - 375px) * 1.7778));margin-inline:auto}
+  .reel__list{contain:none;overflow-y:visible;padding:0 0 6px;grid-auto-flow:column;grid-auto-columns:26%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none}
+  .reel__list::-webkit-scrollbar{display:none}
+  .reel__list li{scroll-snap-align:start}
+  .reel__item{grid-template-columns:1fr;gap:8px}
+  .reel__item img{width:100%}
+}
+@media (max-width:640px){.reel__list{grid-auto-columns:40%}}
+
+/* ---------- about: sized to fit one screen ---------- */
+.about{display:grid;grid-template-columns:minmax(0,4.4fr) minmax(0,8.2fr);gap:clamp(28px,4vw,60px);align-items:stretch}
+.about__media{--card:#000;position:relative;margin:0;min-height:min(460px,calc(var(--vh) - 200px));overflow:hidden;border-radius:10px}
+.about__media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.about__media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4),transparent 40%)}
+.about__main .head{text-align:left;margin-bottom:clamp(18px,2.2vw,28px)}
+.about__cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.46fr);gap:clamp(24px,3vw,44px);align-items:start}
+.bio p{margin:0 0 1em;font-size:clamp(13.5px,calc(.5vw + .95vh),15.5px);line-height:1.75;color:var(--dim)}
+.bio p:first-child{margin-top:-.4em}
+.bio p:last-child{margin-bottom:0}
+.bio strong{color:var(--white);font-weight:700}
+.facts{margin:0;border-top:1px solid var(--line)}
+.facts div{padding:10px 0;border-bottom:1px solid var(--line)}
+.facts dt{color:var(--grey)}
+.facts dd{margin:3px 0 0;font-size:13.5px;font-weight:600;line-height:1.4;color:var(--white)}
+.facts a{text-decoration:none;border-bottom:1px solid var(--line-2)}
+.facts a:hover{border-color:var(--white)}
+.social-row{display:flex;flex-wrap:wrap;gap:8px}
+.social{--card:#070707;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:14px;color:#d8d8d8;transition:color .2s,box-shadow .3s}
+.social:hover{color:#fff;box-shadow:0 0 16px rgba(160,160,160,.45)}
+.about__side .social-row{margin-top:16px}
+.about__side .social{width:38px;height:38px;border-radius:12px}
+.about__side .ico{width:16px;height:16px}
+@media (max-width:1000px){
+  .about{grid-template-columns:minmax(0,3.2fr) minmax(0,8.8fr)}
+  .about__cols{grid-template-columns:minmax(0,1fr) minmax(0,.5fr)}
+  .facts dd{font-size:12.5px}
+}
+@media (max-width:700px){
+  /* phone: heading + video on one screen, then the whole text on the next */
+  .about{display:flex;flex-direction:column;gap:18px}
+  .about__main,.about__cols{display:contents}
+  .about__main .head{order:1;margin:0;text-align:center}
+  .about__media{order:2;min-height:0;width:100%;aspect-ratio:1;max-height:calc(var(--vh) - 200px)}
+  .bio{order:3}
+  .about__side{order:4}
+  .facts{display:none}
+  .about__side .social-row{margin-top:0;justify-content:center}
+  .set__bar{padding:10px 14px}
+  .set__text{font-size:13px;line-height:1.6;padding:14px 16px}
+  .bio p{font-size:13.5px;line-height:1.65}
+}
+
+/* ---------- booking ---------- */
+.booking__lede{margin:14px auto 0;max-width:44ch;font-size:clamp(14px,1.3vw,17px);line-height:1.6;color:var(--dim)}
+.booking__grid{display:grid;grid-template-columns:min(clamp(240px,25vw,330px),calc((var(--vh) - 200px) * .5625)) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:stretch}
+.booking__photo{--card:#000;position:relative;margin:0;aspect-ratio:1125/2000;align-self:start;overflow:hidden;border-radius:12px}
+.booking__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.25) contrast(1.05)}
+.booking__photo figcaption{position:absolute;left:18px;bottom:16px;color:var(--dim)}
+.contacts{display:grid;grid-template-rows:1fr 1fr;gap:16px}
+.contact{--card:#0a0a0a;display:grid;grid-template-columns:1fr auto;align-items:center;align-content:center;gap:8px 24px;padding:clamp(22px,2.6vw,32px);border-radius:14px}
+.contact__label{grid-column:1;color:var(--grey)}
+.contact__who{grid-column:1;margin:0;font-size:clamp(18px,1.9vw,24px);font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.25}
+.contact__what{grid-column:1;margin:0;font-size:13.5px;color:var(--dim)}
+.contact__email{grid-column:1;margin-top:6px;font-size:13px;letter-spacing:.03em;color:var(--text);overflow-wrap:anywhere}
+.contact__email span{display:block;user-select:all}
+.contact__email span + span{margin-top:2px}
+.contact__cta{grid-column:2;grid-row:1 / span 4;display:flex;flex-direction:column;align-items:center;gap:10px}
+.contact__cta .btn{padding:15px 24px}
+.contact__alt{color:var(--grey);text-decoration:none}
+.contact__alt:hover{color:var(--white)}
+.contact__note{flex-basis:100%;margin:6px 0 0;font-size:12.5px;line-height:1.5;color:var(--dim)}
+.contact__note .btn{margin-top:10px;padding:10px 16px}
+.kit{display:grid;grid-template-columns:1.1fr 1fr 1.4fr .9fr;margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--line)}
+.kit > div{padding:24px 22px 8px 0}
+.kit > div + div{padding-left:22px;border-left:1px solid var(--line)}
+.kit .label{margin:0 0 14px;color:var(--grey)}
+.kit p{margin:0 0 14px;font-size:13.5px;line-height:1.7;color:var(--dim)}
+.kit ul{list-style:none;margin:0;padding:0}
+.kit li{padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--dim)}
+.kit li b{color:var(--white);font-weight:700}
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.shot{--card:#0a0a0a;display:block;aspect-ratio:9/14;overflow:hidden;border-radius:8px}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.shot--cut{background:radial-gradient(ellipse at 50% 70%,#2a2a2a,#0b0b0b) padding-box,linear-gradient(155deg,rgba(255,255,255,.36),rgba(120,120,120,.10) 32%,rgba(220,220,220,.26) 62%,rgba(70,70,70,.14)) border-box}
+.shot--cut img{object-fit:contain;object-position:center bottom}
+.shot:hover img{transform:scale(1.05)}
+.shots__note{margin:10px 0 0!important;font-size:12px!important;color:var(--grey)!important}
+.copy{padding:8px 14px}
+@media (max-width:900px){
+  .booking__grid{grid-template-columns:1fr}
+  .booking__photo{aspect-ratio:4/5;max-height:min(440px,calc(var(--vh) - 230px));align-self:stretch}
+  .booking__photo img{object-position:center 30%}
+  .contacts{gap:10px}
+  .contact{grid-template-columns:1fr;gap:4px;padding:16px 18px}
+  .contact__cta{grid-column:1;grid-row:auto;flex-direction:row;flex-wrap:wrap;align-items:center;gap:2px 16px;margin-top:8px}
+  .contact__alt{display:inline-block;padding:9px 2px}  /* a comfortable tap target */
+  .kit{grid-template-columns:1fr 1fr}
+  .kit > div,.kit > div + div{padding:20px 16px 8px 0;border-left:0}
+  .kit > div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+  .kit > div:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:700px){
+  .kit{grid-template-columns:1fr}
+  .kit > div,.kit > div + div,.kit > div:nth-child(even){padding:16px 0 4px;border-left:0}
+  .kit > div + div{border-top:1px solid var(--line)}
+  .kit .label{margin-bottom:10px}
+  .kit p,.kit li{font-size:13px}
+  .kit p{margin-bottom:10px}
+  .kit li{padding:6px 0}
+}
+
+/* ---------- press photo viewer ---------- */
+.lightbox{width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;color:var(--text)}
+.lightbox::backdrop{background:rgba(0,0,0,.97)}
+.lightbox[open]{display:grid;grid-template-rows:minmax(0,1fr) auto auto;justify-items:center;gap:12px;padding:clamp(16px,3vh,32px) var(--gutter) calc(clamp(14px,2.4vh,24px) + env(safe-area-inset-bottom,0px))}
+.lightbox__fig{margin:0;min-height:0;display:grid;place-items:center;width:100%}
+.lightbox__fig img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 170px);max-height:calc(100dvh - 170px);object-fit:contain;border-radius:8px}
+.lightbox__fig img.is-cut{background:radial-gradient(ellipse at 50% 70%,#2a2a2a,#0b0b0b)}
+.lightbox__bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 10px}
+.lightbox__bar .btn{padding:11px 18px}
+.lightbox__name{min-width:9ch;text-align:center;color:var(--grey)}
+.lightbox__hint{margin:0;font-size:12px;color:var(--grey)}
+
+/* ---------- footer ---------- */
+.foot{padding:clamp(48px,6vw,72px) 0 calc(32px + env(safe-area-inset-bottom, 0px));border-top:1px solid var(--line)}
+.foot__spin{width:120px;height:120px;margin:0 auto 28px;mix-blend-mode:screen}
+.foot__row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.foot__brand{display:flex;align-items:center;gap:12px;font-size:11.5px;letter-spacing:.06em;color:var(--grey);line-height:1.6}
+.foot__brand a{color:var(--white);text-decoration:none;border-bottom:1px solid var(--line-2)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html.js .set .curve{stroke-dashoffset:0}
+  html.js .set .area{opacity:1}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="i-instagram" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol><symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol><symbol id="i-spotify" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></symbol><symbol id="i-soundcloud" viewBox="0 0 24 24"><path d="M23.999 14.165c-.052 1.796-1.612 3.169-3.4 3.169h-8.18a.68.68 0 0 1-.675-.683V7.862a.747.747 0 0 1 .452-.724s.75-.513 2.333-.513a5.364 5.364 0 0 1 2.763.755 5.433 5.433 0 0 1 2.57 3.54c.282-.08.574-.121.868-.12.884 0 1.73.358 2.347.992s.948 1.49.922 2.373ZM10.721 8.421c.247 2.98.427 5.697 0 8.672a.264.264 0 0 1-.53 0c-.395-2.946-.22-5.718 0-8.672a.264.264 0 0 1 .53 0ZM9.072 9.448c.285 2.659.37 4.986-.006 7.655a.277.277 0 0 1-.55 0c-.331-2.63-.256-5.02 0-7.655a.277.277 0 0 1 .556 0Zm-1.663-.257c.27 2.726.39 5.171 0 7.904a.266.266 0 0 1-.532 0c-.38-2.69-.257-5.21 0-7.904a.266.266 0 0 1 .532 0Zm-1.647.77a26.108 26.108 0 0 1-.008 7.147.272.272 0 0 1-.542 0 27.955 27.955 0 0 1 0-7.147.275.275 0 0 1 .55 0Zm-1.67 1.769c.421 1.865.228 3.5-.029 5.388a.257.257 0 0 1-.514 0c-.21-1.858-.398-3.549 0-5.389a.272.272 0 0 1 .543 0Zm-1.655-.273c.388 1.897.26 3.508-.01 5.412-.026.28-.514.283-.54 0-.244-1.878-.347-3.54-.01-5.412a.283.283 0 0 1 .56 0Zm-1.668.911c.4 1.268.257 2.292-.026 3.572a.257.257 0 0 1-.514 0c-.241-1.262-.354-2.312-.023-3.572a.283.283 0 0 1 .563 0Z"/></symbol><symbol id="i-applemusic" viewBox="0 0 24 24"><path d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z"/></symbol><symbol id="i-youtube" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol><symbol id="i-facebook" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.52.85l13.6-8.5a1 1 0 0 0 0-1.7L7.52 2.65A1 1 0 0 0 6 3.5z"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M3 5.5h18v13H3z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m3.5 6 8.5 7 8.5-7"/></symbol></svg>
+
+<a class="sr-only" href="#music">Skip to music</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top"><span class="mark" aria-hidden="true"></span>lucavanrøssem</a>
+  <nav class="nav__links" aria-label="Main">
+    <a href="#music">Music</a>
+    <a href="#live">Live</a>
+    <a href="#videos">Videos</a>
+    <a href="#about">About</a>
+  </nav>
+  <a class="btn btn--solid nav__book" href="#booking">Booking</a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <div class="menu__top">
+    <a class="nav__brand" href="#top"><span class="mark" aria-hidden="true"></span>lucavanrøssem</a>
+    <button class="nav__toggle" type="button" data-close style="display:inline-flex">Close</button>
+  </div>
+  <nav class="menu__links" aria-label="Mobile">
+    <a href="#music">Music</a>
+    <a href="#live">Live</a>
+    <a href="#videos">Videos</a>
+    <a href="#about">About</a>
+    <a href="#booking">Booking</a>
+  </nav>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-label="Intro">
+  <video class="hero__video" data-auto muted loop playsinline preload="none" poster="assets/video/hero-lite.jpg" aria-hidden="true">
+    <source src="assets/video/hero-lite.mp4" type="video/mp4">
+  </video>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <canvas class="hero__wave" aria-hidden="true"></canvas>
+
+  <div class="hero__inner">
+    <video class="hero__spin" data-auto muted loop playsinline preload="none" poster="assets/video/sinners-spin-lite.jpg" width="140" height="140" aria-hidden="true">
+      <source src="assets/video/sinners-spin-lite.mp4" type="video/mp4">
+    </video>
+    <h1 class="hero__name chrome">lucavanrøssem</h1>
+    <p class="hero__genre label"><span>Hard techno&nbsp;·</span> <span>Hardcore&nbsp;·</span> <span>Raw neo rave</span></p>
+    <div class="btns btns--center">
+      <a class="btn btn--solid" href="#music"><svg class="arr" aria-hidden="true"><use href="#i-play"/></svg>Listen</a>
+      <a class="btn btn--sonar" href="#booking"><canvas aria-hidden="true"></canvas><span>Book the artist</span></a>
+    </div>
+  </div>
+
+  <div class="hero__foot label">
+    <a class="hero__live" href="#videos"><span class="dot" aria-hidden="true"></span>Live footage</a>
+    <span class="scroll-cue" aria-hidden="true">Scroll<i></i></span>
+    <span>Ghent, BE<span class="hide-sm"> · 160–165 BPM</span></span>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="Numbers">
+  <div class="wrap stats__grid">
+    <div class="stat"><div class="stat__num chrome" data-live="all">764K+</div><div class="stat__label label">All-time streams</div></div>
+    <div class="stat"><div class="stat__num chrome" data-live="ngaf">575K+</div><div class="stat__label label">Never Gave A Fxck</div></div>
+    <div class="stat"><div class="stat__num chrome">32K</div><div class="stat__label label">Monthly listeners</div></div>
+    <div class="stat"><div class="stat__num chrome">9K+</div><div class="stat__label label">Instagram followers</div></div>
+  </div>
+</section>
+
+<!-- ============ MUSIC ============ -->
+<section class="section dotfield-host" id="music">
+  <div class="wrap">
+    <header class="head">
+      <h2 class="h2 chrome">Music</h2>
+      <p class="head__sub label">Released on Sinners Records</p>
+    </header>
+
+    <div class="releases">
+      <article class="release">
+        <div class="release__art chrome-edge" data-spotify="5ClOSHZvQ22XSk1m1ArT55">
+          <img src="assets/covers/as-mean-as-they-come.webp" alt="AS MEAN AS THEY COME cover art, lucavanrøssem and JRD, Sinners Records SNR005" width="1000" height="1000" loading="lazy" decoding="async">
+          <a class="play" href="https://open.spotify.com/track/5ClOSHZvQ22XSk1m1ArT55" target="_blank" rel="noopener" aria-label="Play AS MEAN AS THEY COME on Spotify">
+            <span class="play__icon"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
+          </a>
+        </div>
+        <div class="release__body">
+          <div class="release__top"><span class="pill label">Latest · #SNR005</span><span class="release__stat label"><b data-live="amatc">25K+</b> streams</span></div>
+          <h3 class="release__title chrome">As Mean As They Come</h3>
+          <p class="release__meta label"><span class="nm">lucavanrøssem</span>, JRD · Sinners Records</p>
+          <div class="release__links">
+            <a class="btn btn--solid" href="https://open.spotify.com/track/5ClOSHZvQ22XSk1m1ArT55" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify"><svg class="ico" aria-hidden="true"><use href="#i-spotify"/></svg><span>Spotify</span></a>
+            <a class="btn" href="https://soundcloud.com/young-lostsoul/as-mean-as-they-come" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud"><svg class="ico" aria-hidden="true"><use href="#i-soundcloud"/></svg><span>SoundCloud</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="release">
+        <div class="release__art chrome-edge" data-spotify="65KfWhFsKbskiKIICnDQDH">
+          <img src="assets/covers/never-gave-a-fxck.webp" alt="NEVER GAVE A FXCK cover art, lucavanrøssem, Sinners Records SNR001" width="1000" height="1000" loading="lazy" decoding="async">
+          <a class="play" href="https://open.spotify.com/track/65KfWhFsKbskiKIICnDQDH" target="_blank" rel="noopener" aria-label="Play NEVER GAVE A FXCK on Spotify">
+            <span class="play__icon"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
+          </a>
+        </div>
+        <div class="release__body">
+          <div class="release__top"><span class="pill pill--ghost label">Debut · #SNR001</span><span class="release__stat label"><b data-live="ngaf">575K+</b> streams</span></div>
+          <h3 class="release__title chrome">Never Gave A Fxck</h3>
+          <p class="release__meta label"><span class="nm">lucavanrøssem</span> · Sinners Records · 19.03.2026</p>
+          <div class="release__links">
+            <a class="btn btn--solid" href="https://open.spotify.com/track/65KfWhFsKbskiKIICnDQDH" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify"><svg class="ico" aria-hidden="true"><use href="#i-spotify"/></svg><span>Spotify</span></a>
+            <a class="btn" href="https://soundcloud.com/young-lostsoul/lucavanrossem-never-gave-a" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud"><svg class="ico" aria-hidden="true"><use href="#i-soundcloud"/></svg><span>SoundCloud</span></a>
+            <a class="btn" href="https://www.youtube.com/watch?v=UOeUnbMSS9A" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="ico" aria-hidden="true"><use href="#i-youtube"/></svg><span>YouTube</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="subhead">
+      <h3 class="label">Edits, remixes &amp; sets</h3>
+      <a class="label" href="https://soundcloud.com/young-lostsoul" target="_blank" rel="noopener">All on SoundCloud <svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <ul class="covers">
+      <li><a class="cv" href="https://on.soundcloud.com/aptSLPU6DoahbLFkoF" target="_blank" rel="noopener">
+        <span class="cv__art chrome-edge"><img src="assets/covers/sinners-radio-sm.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="cv__go"><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        <span class="cv__title">Sinners Radio</span>
+        <span class="cv__sub">1H hardtechno set · #SNR004</span>
+        <span class="cv__tag">Mix</span></a></li>
+      <li><a class="cv" href="https://on.soundcloud.com/J7vvI77OunrOU4KVSK" target="_blank" rel="noopener">
+        <span class="cv__art chrome-edge"><img src="assets/covers/little-bad-girl-sm.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="cv__go"><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        <span class="cv__title">Little Bad Girl</span>
+        <span class="cv__sub">David Guetta ft. Taio Cruz &amp; Ludacris · <span class="nm">lucavanrøssem</span> remix · #SNR003</span>
+        <span class="cv__tag">Remix</span></a></li>
+      <li><a class="cv" href="https://on.soundcloud.com/FTo1J1rvGs87WpKdH6" target="_blank" rel="noopener">
+        <span class="cv__art chrome-edge"><img src="assets/covers/chamber-of-death-sm.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="cv__go"><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        <span class="cv__title">Chamber of Death</span>
+        <span class="cv__sub"><span class="nm">lucavanrøssem</span>, Toxic Machinery · edit · #SNR002</span>
+        <span class="cv__tag">Edit</span></a></li>
+      <li><a class="cv" href="https://soundcloud.com/young-lostsoul/smac-u-bolivia-rework-free-dl-lucavanrossem-edit" target="_blank" rel="noopener">
+        <span class="cv__art chrome-edge"><img src="assets/covers/bolivia-sm.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="cv__go"><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        <span class="cv__title">Bolivia</span>
+        <span class="cv__sub">SMAC-U · <span class="nm">lucavanrøssem</span> remix · free download</span>
+        <span class="cv__tag">Remix</span></a></li>
+      <li><a class="cv" href="https://on.soundcloud.com/YdI8LUY4uVFKpNrmAq" target="_blank" rel="noopener">
+        <span class="cv__art chrome-edge"><img src="assets/covers/live-at-club-vaag-sm.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="cv__go"><svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></span></span>
+        <span class="cv__title">Live at Club Vaag</span>
+        <span class="cv__sub">With JAPAU, DT43, NIJN · 16.01.2026</span>
+        <span class="cv__tag">Live set</span></a></li>
+      <li><a class="cv" href="#videos" data-clip="2">
+        <span class="cv__art chrome-edge"><img src="assets/covers/rampage-sm.webp" alt="" width="480" height="480" loading="lazy" decoding="async"><span class="cv__go"><svg class="arr" aria-hidden="true"><use href="#i-play"/></svg></span></span>
+        <span class="cv__title">Rampage</span>
+        <span class="cv__sub">Mashup anthem · watch it live at Club Vaag</span>
+        <span class="cv__tag">Mashup</span></a></li>
+    </ul>
+    <div class="section__more">
+      <a class="btn" href="https://open.spotify.com/artist/6fvw8MYBJoUxH19afLOY3k" target="_blank" rel="noopener">Spotify artist profile <svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIVE EXPERIENCE ============ -->
+<section class="section dotfield-host" id="live">
+  <div class="wrap">
+    <header class="head">
+      <h2 class="h2 chrome">The Live Experience</h2>
+      <p class="head__sub label">Controlled chaos at 160–165 BPM</p>
+    </header>
+
+    <figure class="set chrome-edge" id="setChart">
+      <div class="set__bar label">
+        <span>The energy through a set</span>
+        <span><b>160–165</b> BPM</span>
+      </div>
+      <svg viewBox="-20 30 1040 305" preserveAspectRatio="none" role="img" aria-labelledby="setTitle setDesc">
+        <title id="setTitle">How a lucavanrøssem set builds</title>
+        <desc id="setDesc">Energy climbs steadily from the intro to the end, with small waves along the way.</desc>
+        <defs>
+          <linearGradient id="energyFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c8140a" stop-opacity=".2"/>
+            <stop offset="1" stop-color="#c8140a" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g class="grid">
+          <line x1="0" y1="60" x2="1000" y2="60"/><line x1="0" y1="140" x2="1000" y2="140"/>
+          <line x1="0" y1="220" x2="1000" y2="220"/><line x1="0" y1="300" x2="1000" y2="300"/>
+        </g>
+        <path class="area" d="M0 307.0 L5 305.7 L10 304.1 L15 302.3 L20 300.2 L25 297.9 L30 295.4 L35 292.8 L40 290.1 L45 287.5 L50 284.9 L55 282.5 L60 280.2 L65 278.1 L70 276.4 L75 274.9 L80 273.7 L85 272.8 L90 272.3 L95 272.0 L100 272.0 L105 272.1 L110 272.5 L115 272.9 L120 273.3 L125 273.6 L130 273.9 L135 274.0 L140 273.8 L145 273.4 L150 272.7 L155 271.7 L160 270.3 L165 268.5 L170 266.5 L175 264.2 L180 261.7 L185 259.0 L190 256.1 L195 253.3 L200 250.4 L205 247.6 L210 245.0 L215 242.7 L220 240.6 L225 238.8 L230 237.3 L235 236.3 L240 235.5 L245 235.1 L250 235.1 L255 235.3 L260 235.7 L265 236.2 L270 236.8 L275 237.5 L280 238.0 L285 238.4 L290 238.6 L295 238.5 L300 238.2 L305 237.4 L310 236.3 L315 234.8 L320 232.9 L325 230.7 L330 228.2 L335 225.4 L340 222.4 L345 219.4 L350 216.3 L355 213.2 L360 210.3 L365 207.6 L370 205.1 L375 203.0 L380 201.2 L385 199.8 L390 198.9 L395 198.3 L400 198.1 L405 198.2 L410 198.6 L415 199.3 L420 200.1 L425 200.9 L430 201.7 L435 202.5 L440 203.0 L445 203.3 L450 203.3 L455 202.9 L460 202.1 L465 200.9 L470 199.2 L475 197.2 L480 194.8 L485 192.0 L490 189.0 L495 185.8 L500 182.5 L505 179.2 L510 176.0 L515 172.9 L520 170.0 L525 167.5 L530 165.4 L535 163.6 L540 162.3 L545 161.5 L550 161.1 L555 161.1 L560 161.4 L565 162.1 L570 163.0 L575 164.0 L580 165.1 L585 166.1 L590 167.0 L595 167.7 L600 168.1 L605 168.1 L610 167.6 L615 166.8 L620 165.4 L625 163.6 L630 161.4 L635 158.7 L640 155.8 L645 152.5 L650 149.1 L655 145.5 L660 142.0 L665 138.6 L670 135.4 L675 132.5 L680 129.9 L685 127.8 L690 126.1 L695 124.9 L700 124.2 L705 124.0 L710 124.2 L715 124.8 L720 125.7 L725 126.8 L730 128.1 L735 129.4 L740 130.6 L745 131.6 L750 132.4 L755 132.8 L760 132.9 L765 132.4 L770 131.4 L775 130.0 L780 128.0 L785 125.5 L790 122.6 L795 119.4 L800 115.9 L805 112.2 L810 108.5 L815 104.7 L820 101.2 L825 97.8 L830 94.8 L835 92.2 L840 90.1 L845 88.5 L850 87.5 L855 86.9 L860 86.9 L865 87.3 L870 88.2 L875 89.4 L880 90.7 L885 92.2 L890 93.7 L895 95.1 L900 96.3 L905 97.2 L910 97.7 L915 97.7 L920 97.1 L925 96.1 L930 94.4 L935 92.2 L940 89.6 L945 86.4 L950 82.9 L955 79.2 L960 75.3 L965 71.3 L970 67.4 L975 63.7 L980 60.2 L985 57.2 L990 54.6 L995 52.5 L1000 51.0 L1000 330 L0 330 Z"/>
+        <line class="trend" x1="0" y1="300" x2="1000" y2="65"/>
+        <path class="curve" d="M0 307.0 L5 305.7 L10 304.1 L15 302.3 L20 300.2 L25 297.9 L30 295.4 L35 292.8 L40 290.1 L45 287.5 L50 284.9 L55 282.5 L60 280.2 L65 278.1 L70 276.4 L75 274.9 L80 273.7 L85 272.8 L90 272.3 L95 272.0 L100 272.0 L105 272.1 L110 272.5 L115 272.9 L120 273.3 L125 273.6 L130 273.9 L135 274.0 L140 273.8 L145 273.4 L150 272.7 L155 271.7 L160 270.3 L165 268.5 L170 266.5 L175 264.2 L180 261.7 L185 259.0 L190 256.1 L195 253.3 L200 250.4 L205 247.6 L210 245.0 L215 242.7 L220 240.6 L225 238.8 L230 237.3 L235 236.3 L240 235.5 L245 235.1 L250 235.1 L255 235.3 L260 235.7 L265 236.2 L270 236.8 L275 237.5 L280 238.0 L285 238.4 L290 238.6 L295 238.5 L300 238.2 L305 237.4 L310 236.3 L315 234.8 L320 232.9 L325 230.7 L330 228.2 L335 225.4 L340 222.4 L345 219.4 L350 216.3 L355 213.2 L360 210.3 L365 207.6 L370 205.1 L375 203.0 L380 201.2 L385 199.8 L390 198.9 L395 198.3 L400 198.1 L405 198.2 L410 198.6 L415 199.3 L420 200.1 L425 200.9 L430 201.7 L435 202.5 L440 203.0 L445 203.3 L450 203.3 L455 202.9 L460 202.1 L465 200.9 L470 199.2 L475 197.2 L480 194.8 L485 192.0 L490 189.0 L495 185.8 L500 182.5 L505 179.2 L510 176.0 L515 172.9 L520 170.0 L525 167.5 L530 165.4 L535 163.6 L540 162.3 L545 161.5 L550 161.1 L555 161.1 L560 161.4 L565 162.1 L570 163.0 L575 164.0 L580 165.1 L585 166.1 L590 167.0 L595 167.7 L600 168.1 L605 168.1 L610 167.6 L615 166.8 L620 165.4 L625 163.6 L630 161.4 L635 158.7 L640 155.8 L645 152.5 L650 149.1 L655 145.5 L660 142.0 L665 138.6 L670 135.4 L675 132.5 L680 129.9 L685 127.8 L690 126.1 L695 124.9 L700 124.2 L705 124.0 L710 124.2 L715 124.8 L720 125.7 L725 126.8 L730 128.1 L735 129.4 L740 130.6 L745 131.6 L750 132.4 L755 132.8 L760 132.9 L765 132.4 L770 131.4 L775 130.0 L780 128.0 L785 125.5 L790 122.6 L795 119.4 L800 115.9 L805 112.2 L810 108.5 L815 104.7 L820 101.2 L825 97.8 L830 94.8 L835 92.2 L840 90.1 L845 88.5 L850 87.5 L855 86.9 L860 86.9 L865 87.3 L870 88.2 L875 89.4 L880 90.7 L885 92.2 L890 93.7 L895 95.1 L900 96.3 L905 97.2 L910 97.7 L915 97.7 L920 97.1 L925 96.1 L930 94.4 L935 92.2 L940 89.6 L945 86.4 L950 82.9 L955 79.2 L960 75.3 L965 71.3 L970 67.4 L975 63.7 L980 60.2 L985 57.2 L990 54.6 L995 52.5 L1000 51.0"/>
+      </svg>
+      <div class="set__axis label" aria-hidden="true"><span>Intro</span><span>End</span></div>
+      <p class="set__text"><span>A <em>lucavanrøssem</em> set operates at the harder edge of electronic music, bridging <em>hard techno</em> with hardcore and raw influences. Built on precision, atmosphere and high-energy four-to-the-floor rhythms that hit hard but keep building, it's engineered to carry a dancefloor all night long, with his own productions folded straight into the mix. <em>Explosive when it needs to be, progressive when it counts.</em></span></p>
+    </figure>
+
+    <div class="live__grid">
+      <div>
+        <p class="label" style="margin:0 0 14px;color:var(--grey)">Played</p>
+        <ul class="venues">
+          <li><b>DreamBeats Festival</b><a class="label" href="#videos" data-clip="4"><svg aria-hidden="true"><use href="#i-play"/></svg> Watch</a></li>
+          <li><b>Club Vaag</b><a class="label" href="#videos" data-clip="0"><svg aria-hidden="true"><use href="#i-play"/></svg> Watch</a></li>
+          <li><b>Cube</b><span class="label">Belgium</span></li>
+          <li><b>Decadance</b><span class="label">Ghent</span></li>
+          <li><b>Sauscore</b><span class="label">Ghent</span></li>
+          <li><b>Therapy</b><span class="label">Belgium</span></li>
+          <li><b>Mandapam Events</b><span class="label intl">Malta</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="label" style="margin:0 0 14px;color:var(--grey)">Tracks supported by</p>
+        <p class="support"><b>OGUZ</b> <span>/</span> <b>Restricted</b> <span>/</span> <b>Jazzy</b> <span>/</span> <b>Chaos Project</b> <span>/</span> <b>A.N.I</b> <span>/</span> <b>TITI</b> <span>/</span> <b>Karah</b></p>
+        <div class="dates chrome-edge">
+          <p class="label">Next dates</p>
+          <p>New dates land on Instagram first.</p>
+          <div class="btns">
+            <a class="btn" href="https://www.instagram.com/lucavanrossem" target="_blank" rel="noopener">Follow on Instagram <svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--solid" href="#booking">Book</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section class="section" id="videos">
+  <div class="wrap">
+    <header class="head">
+      <h2 class="h2 chrome">Videos</h2>
+      <p class="head__sub label">Live at Club Vaag &amp; DreamBeats Festival</p>
+    </header>
+
+    <!-- To add a clip: drop the .mp4 + a .jpg still into assets/video/ and copy one <li> below. -->
+    <div class="reel">
+      <div class="reel__stage chrome-edge" id="reelStage">
+        <video id="reelVideo" playsinline preload="none" poster="assets/video/club-vaag-03.jpg">
+          <source src="assets/video/club-vaag-03.mp4" type="video/mp4">
+        </video>
+        <button class="reel__play" type="button" aria-label="Play video">
+          <span class="reel__cap"><span class="label" id="reelVenue">Now playing · Club Vaag</span><b id="reelTitle">NEVER GAVE A FXCK</b></span>
+          <span class="icon"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
+        </button>
+      </div>
+      <ol class="reel__list" aria-label="Clips">
+        <li><button class="reel__item is-active" type="button" data-venue="Club Vaag" data-src="assets/video/club-vaag-03.mp4" data-poster="assets/video/club-vaag-03.jpg"><img src="assets/video/club-vaag-03.jpg" alt="" width="84" height="47" loading="lazy" decoding="async"><span><span class="t">NEVER GAVE A FXCK</span><span class="d">Club Vaag · 0:55</span></span></button></li>
+        <li><button class="reel__item" type="button" data-venue="Club Vaag" data-src="assets/video/club-vaag-02.mp4" data-poster="assets/video/club-vaag-02.jpg"><img src="assets/video/club-vaag-02.jpg" alt="" width="84" height="47" loading="lazy" decoding="async"><span><span class="t">Zombie Attack</span><span class="d">Club Vaag · 1:00</span></span></button></li>
+        <li><button class="reel__item" type="button" data-venue="Club Vaag" data-src="assets/video/club-vaag-04.mp4" data-poster="assets/video/club-vaag-04.jpg"><img src="assets/video/club-vaag-04.jpg" alt="" width="84" height="47" loading="lazy" decoding="async"><span><span class="t">Rampage (Mashup Anthem)</span><span class="d">Club Vaag · 0:37</span></span></button></li>
+        <li><button class="reel__item" type="button" data-venue="Club Vaag" data-src="assets/video/club-vaag-05.mp4" data-poster="assets/video/club-vaag-05.jpg"><img src="assets/video/club-vaag-05.jpg" alt="" width="84" height="47" loading="lazy" decoding="async"><span><span class="t">Hard Beat</span><span class="d">Club Vaag · 0:24</span></span></button></li>
+        <li><button class="reel__item" type="button" data-venue="DreamBeats Festival · Kortemark" data-src="assets/video/dreambeats-01.mp4" data-poster="assets/video/dreambeats-01.jpg"><img src="assets/video/dreambeats-01.jpg" alt="" width="84" height="47" loading="lazy" decoding="async"><span><span class="t">Summer Song</span><span class="d">DreamBeats Festival · 0:23</span></span></button></li>
+        <li><button class="reel__item" type="button" data-venue="Club Vaag" data-src="assets/video/club-vaag-06.mp4" data-poster="assets/video/club-vaag-06.jpg"><img src="assets/video/club-vaag-06.jpg" alt="" width="84" height="47" loading="lazy" decoding="async"><span><span class="t">Bolivia (lucavanrøssem remix)</span><span class="d">Club Vaag · 0:39</span></span></button></li>
+        <li><button class="reel__item" type="button" data-venue="Club Vaag" data-src="assets/video/club-vaag-01.mp4" data-poster="assets/video/club-vaag-01.jpg"><img src="assets/video/club-vaag-01.jpg" alt="" width="84" height="47" loading="lazy" decoding="async"><span><span class="t">Naughty</span><span class="d">Club Vaag · 0:41</span></span></button></li>
+      </ol>
+    </div>
+    <div class="section__more">
+      <a class="btn" href="https://www.instagram.com/lucavanrossem" target="_blank" rel="noopener">More on Instagram <svg class="arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap about">
+    <figure class="about__media chrome-edge">
+      <video data-auto muted loop playsinline preload="none" poster="assets/video/about-drop-hd.jpg" aria-label="lucavanrøssem at Club Vaag: the build-up and the drop of NEVER GAVE A FXCK">
+        <source src="assets/video/about-drop-hd.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <div class="about__main">
+      <header class="head">
+        <h2 class="h2 chrome">About</h2>
+      </header>
+      <div class="about__cols">
+        <div class="bio">
+          <p><strong>lucavanrøssem</strong> is a Ghent-based DJ and producer operating at the harder edge of electronic music. His sound bridges <strong>hard techno</strong> with hardcore and raw influences — built on precision, atmosphere and high-energy four-to-the-floor rhythms that hit hard but keep building, engineered to carry a dancefloor all night long. Explosive when it needs to be, progressive when it counts.</p>
+          <p>His tracks have drawn support from <strong>OGUZ, Restricted, Jazzy, Chaos Project, A.N.I, TITI</strong> and <strong>Karah</strong>, and over the past two years he's brought his sound to dancefloors across Belgium and internationally to Malta.</p>
+          <p>As co-founder of <strong>Sinners Culture</strong> and its label <strong>Sinners Records</strong>, he folds his own productions straight into his sets. Two and a half years into producing, his debut release <strong>“NEVER GAVE A FXCK”</strong> has passed half a million streams on Spotify.</p>
+        </div>
+        <div class="about__side">
+          <dl class="facts">
+            <div><dt class="label">Based</dt><dd>Ghent, Belgium</dd></div>
+            <div><dt class="label">Sound</dt><dd>Hard techno, hardcore, neo rave</dd></div>
+            <div><dt class="label">Tempo</dt><dd>160–165 BPM</dd></div>
+            <div><dt class="label">Co-founder</dt><dd><a href="https://sinnersculture.com" target="_blank" rel="noopener">Sinners Culture</a> &amp; <a href="https://sinnersculture.com/pages/lucavanrossem" target="_blank" rel="noopener">Sinners Records</a></dd></div>
+            <div><dt class="label">Streams</dt><dd><span data-live="all">764K+</span> all-time</dd></div>
+          </dl>
+          <div class="social-row" aria-label="Socials">
+            <a class="social chrome-edge" href="https://www.instagram.com/lucavanrossem" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+            <a class="social chrome-edge" href="https://www.tiktok.com/@lucavanrossem" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
+            <a class="social chrome-edge" href="https://open.spotify.com/artist/6fvw8MYBJoUxH19afLOY3k" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify"><svg class="ico" aria-hidden="true"><use href="#i-spotify"/></svg></a>
+            <a class="social chrome-edge" href="https://soundcloud.com/young-lostsoul" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud"><svg class="ico" aria-hidden="true"><use href="#i-soundcloud"/></svg></a>
+            <a class="social chrome-edge" href="https://music.apple.com/us/song/never-gave-a-fxck-snr-001/1885488048" target="_blank" rel="noopener" aria-label="Apple Music" title="Apple Music"><svg class="ico" aria-hidden="true"><use href="#i-applemusic"/></svg></a>
+            <a class="social chrome-edge" href="https://www.youtube.com/watch?v=UOeUnbMSS9A" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="ico" aria-hidden="true"><use href="#i-youtube"/></svg></a>
+            <a class="social chrome-edge" href="https://www.facebook.com/lucavanrossem" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="section dotfield-host" id="booking">
+  <div class="wrap">
+    <header class="head">
+      <h2 class="h2 chrome">Booking</h2>
+      <p class="booking__lede">Clubs, festivals, raves. All around the world.</p>
+    </header>
+
+    <div class="booking__grid">
+      <figure class="booking__photo chrome-edge">
+        <img src="assets/photos/luca-portrait-dark-md.webp" alt="lucavanrøssem portrait" width="720" height="1280" loading="lazy" decoding="async">
+      </figure>
+      <div class="contacts">
+        <div class="contact chrome-edge">
+          <p class="contact__label label" style="margin:0">Booking agency</p>
+          <p class="contact__who chrome">SKORM Agency</p>
+          <p class="contact__what">Bookings &amp; enquiries</p>
+          <span class="contact__email"><span>contact@skorm-agency.com</span><span>hello@skorm-agency.com</span></span>
+          <div class="contact__cta" data-to="contact@skorm-agency.com,hello@skorm-agency.com" data-subject="Booking request — lucavanrøssem" data-body="Hi SKORM,&#10;&#10;We would like to book lucavanrøssem for the following event:&#10;&#10;Event name: &#10;Date: &#10;Venue / city: &#10;Capacity: &#10;Set time / length: &#10;Budget: &#10;Additional info: &#10;&#10;Looking forward to hearing from you.">
+            <a class="btn btn--sonar" data-mail="main" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=contact%40skorm-agency.com%2Chello%40skorm-agency.com&amp;su=Booking%20request%20%E2%80%94%20lucavanr%C3%B8ssem&amp;body=Hi%20SKORM%2C%0A%0AWe%20would%20like%20to%20book%20lucavanr%C3%B8ssem%20for%20the%20following%20event%3A%0A%0AEvent%20name%3A%20%0ADate%3A%20%0AVenue%20%2F%20city%3A%20%0ACapacity%3A%20%0ASet%20time%20%2F%20length%3A%20%0ABudget%3A%20%0AAdditional%20info%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you." target="_blank" rel="noopener"><canvas aria-hidden="true"></canvas><svg class="arr" aria-hidden="true"><use href="#i-mail"/></svg><span>Book <span class="nm">lucavanrøssem</span></span></a>
+            <a class="contact__alt label" data-mail="alt" href="mailto:contact@skorm-agency.com,hello@skorm-agency.com?subject=Booking%20request%20%E2%80%94%20lucavanr%C3%B8ssem&amp;body=Hi%20SKORM%2C%0D%0A%0D%0AWe%20would%20like%20to%20book%20lucavanr%C3%B8ssem%20for%20the%20following%20event%3A%0D%0A%0D%0AEvent%20name%3A%20%0D%0ADate%3A%20%0D%0AVenue%20%2F%20city%3A%20%0D%0ACapacity%3A%20%0D%0ASet%20time%20%2F%20length%3A%20%0D%0ABudget%3A%20%0D%0AAdditional%20info%3A%20%0D%0A%0D%0ALooking%20forward%20to%20hearing%20from%20you.">Or use your mail app</a>
+          </div>
+        </div>
+        <div class="contact chrome-edge">
+          <p class="contact__label label" style="margin:0">Management</p>
+          <p class="contact__who chrome">Sinners Culture</p>
+          <p class="contact__what">Bookings, enquiries, collabs &amp; management</p>
+          <span class="contact__email"><span>mgmt@sinnersculture.com</span></span>
+          <div class="contact__cta" data-to="mgmt@sinnersculture.com" data-subject="Enquiry — lucavanrøssem" data-body="Hi Sinners Culture,&#10;&#10;I’m reaching out about lucavanrøssem regarding:&#10;&#10;- Booking / show&#10;- Collaboration&#10;- Press / interview&#10;- Other: &#10;&#10;Details (date, venue, budget if relevant): &#10;&#10;Thanks,">
+            <a class="btn btn--sonar" data-mail="main" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mgmt%40sinnersculture.com&amp;su=Enquiry%20%E2%80%94%20lucavanr%C3%B8ssem&amp;body=Hi%20Sinners%20Culture%2C%0A%0AI%E2%80%99m%20reaching%20out%20about%20lucavanr%C3%B8ssem%20regarding%3A%0A%0A-%20Booking%20%2F%20show%0A-%20Collaboration%0A-%20Press%20%2F%20interview%0A-%20Other%3A%20%0A%0ADetails%20%28date%2C%20venue%2C%20budget%20if%20relevant%29%3A%20%0A%0AThanks%2C" target="_blank" rel="noopener"><canvas aria-hidden="true"></canvas><svg class="arr" aria-hidden="true"><use href="#i-mail"/></svg><span>Get in touch</span></a>
+            <a class="contact__alt label" data-mail="alt" href="mailto:mgmt@sinnersculture.com?subject=Enquiry%20%E2%80%94%20lucavanr%C3%B8ssem&amp;body=Hi%20Sinners%20Culture%2C%0D%0A%0D%0AI%E2%80%99m%20reaching%20out%20about%20lucavanr%C3%B8ssem%20regarding%3A%0D%0A%0D%0A-%20Booking%20%2F%20show%0D%0A-%20Collaboration%0D%0A-%20Press%20%2F%20interview%0D%0A-%20Other%3A%20%0D%0A%0D%0ADetails%20%28date%2C%20venue%2C%20budget%20if%20relevant%29%3A%20%0D%0A%0D%0AThanks%2C">Or use your mail app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kit" aria-label="Press kit">
+      <div>
+        <p class="label">Short bio</p>
+        <p id="shortBio">Hailing from Ghent, Belgium, lucavanrøssem fuses hard techno with hardcore and raw neo rave influences, turning every stage into pure controlled chaos.</p>
+        <button class="btn copy" type="button" data-copy="shortBio">Copy bio</button>
+      </div>
+      <div>
+        <p class="label">Highlights</p>
+        <ul>
+          <li><b data-live="ngaf">575K+</b> Spotify streams on the debut</li>
+          <li><b>Supported by</b> OGUZ, Restricted, Jazzy &amp; more</li>
+          <li><b>Co-founder</b>, Sinners Culture &amp; Sinners Records</li>
+        </ul>
+      </div>
+      <div>
+        <p class="label">Press photos</p>
+        <div class="shots">
+          <a class="shot chrome-edge" href="assets/photos/luca-portrait.jpg" data-name="lucavanrossem-portrait.jpg" aria-label="Portrait"><img src="assets/photos/luca-portrait-thumb.webp" alt="" width="180" height="320" loading="lazy" decoding="async"></a>
+          <a class="shot chrome-edge" href="assets/photos/luca-portrait-dark.jpg" data-name="lucavanrossem-portrait-dark.jpg" aria-label="Dark portrait"><img src="assets/photos/luca-portrait-dark-thumb.webp" alt="" width="180" height="320" loading="lazy" decoding="async"></a>
+          <a class="shot shot--cut" href="assets/photos/luca-cutout.png" data-name="lucavanrossem-cutout.png" aria-label="Cut-out (transparent PNG)"><img src="assets/photos/luca-cutout-thumb.webp" alt="" width="275" height="320" loading="lazy" decoding="async"></a>
+          <a class="shot shot--cut" href="assets/photos/luca-cutout-dark.png" data-name="lucavanrossem-cutout-dark.png" aria-label="Dark cut-out (transparent PNG)"><img src="assets/photos/luca-cutout-dark-thumb.webp" alt="" width="180" height="320" loading="lazy" decoding="async"></a>
+        </div>
+        <p class="shots__note">Tap a photo to view it full size and download it. The last two are transparent cut-outs.</p>
+      </div>
+      <div>
+        <p class="label">Tech</p>
+        <p>Plays from Rekordbox USB on CDJs.</p>
+        <p>Signature tempo 160–165 BPM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- press photo viewer -->
+<dialog class="lightbox" id="lightbox" aria-label="Press photo">
+  <figure class="lightbox__fig"><img alt="" decoding="async"></figure>
+  <div class="lightbox__bar">
+    <button class="btn lightbox__nav" type="button" data-step="-1" aria-label="Previous photo">&lt;</button>
+    <span class="lightbox__name label"></span>
+    <button class="btn lightbox__nav" type="button" data-step="1" aria-label="Next photo">&gt;</button>
+    <button class="btn btn--solid" type="button" data-download><svg class="arr" aria-hidden="true"><use href="#i-download"/></svg>Download</button>
+    <button class="btn" type="button" data-close-lightbox>Close</button>
+  </div>
+  <p class="lightbox__hint">Or right-click / long-press the photo to save it.</p>
+</dialog>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot dotfield-host">
+  <video class="foot__spin" data-dot-exclude data-auto muted loop playsinline preload="none" poster="assets/video/sinners-spin-lite.jpg" width="120" height="120" aria-hidden="true">
+    <source src="assets/video/sinners-spin-lite.mp4" type="video/mp4">
+  </video>
+  <div class="wrap foot__row">
+    <div class="foot__brand"><span class="mark" aria-hidden="true"></span><span>© 2026 lucavanrøssem · Co-founder of <a href="https://sinnersculture.com" target="_blank" rel="noopener">Sinners Culture</a> &amp; Sinners Records</span></div>
+    <nav class="social-row" aria-label="Social">
+            <a class="social chrome-edge" href="https://www.instagram.com/lucavanrossem" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+            <a class="social chrome-edge" href="https://www.tiktok.com/@lucavanrossem" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok"><svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
+            <a class="social chrome-edge" href="https://open.spotify.com/artist/6fvw8MYBJoUxH19afLOY3k" target="_blank" rel="noopener" aria-label="Spotify" title="Spotify"><svg class="ico" aria-hidden="true"><use href="#i-spotify"/></svg></a>
+            <a class="social chrome-edge" href="https://soundcloud.com/young-lostsoul" target="_blank" rel="noopener" aria-label="SoundCloud" title="SoundCloud"><svg class="ico" aria-hidden="true"><use href="#i-soundcloud"/></svg></a>
+            <a class="social chrome-edge" href="https://music.apple.com/us/song/never-gave-a-fxck-snr-001/1885488048" target="_blank" rel="noopener" aria-label="Apple Music" title="Apple Music"><svg class="ico" aria-hidden="true"><use href="#i-applemusic"/></svg></a>
+            <a class="social chrome-edge" href="https://www.youtube.com/watch?v=UOeUnbMSS9A" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg class="ico" aria-hidden="true"><use href="#i-youtube"/></svg></a>
+            <a class="social chrome-edge" href="https://www.facebook.com/lucavanrossem" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* broken image: swap to a fallback if one is given, otherwise hide it */
+  document.querySelectorAll('img').forEach(function(img){
+    function broken(){
+      var fb = img.getAttribute('data-fallback');
+      if (fb && img.getAttribute('src') !== fb){ img.loading = 'eager'; img.src = fb; return; }
+      img.classList.add('is-broken');
+    }
+    img.addEventListener('load', function(){ if (img.naturalWidth > 0) img.classList.remove('is-broken'); });
+    if (img.complete && img.naturalWidth === 0) broken();
+    img.addEventListener('error', broken);
+  });
+
+  /* stream counts keep counting up by themselves, using the same numbers as the Sinners Culture store's live counter:
+     a count on a given date plus the average streams per day since then (all-time = the 705K from the store profile
+     on that date, growing with both releases). Update BASE and PER_DAY when fresh Spotify numbers come in. */
+  (function(){
+    var SINCE = 1787659407;  /* 25.08.2026, when the store's counter was set */
+    var BASE = { ngaf: 531429, amatc: 10438, all: 705000 };
+    var PER_DAY = { ngaf: 1311, amatc: 455, all: 1311 + 455 };
+    var days = Math.max(0, (Date.now() / 1000 - SINCE) / 86400);
+    document.querySelectorAll('[data-live]').forEach(function(el){
+      var k = el.getAttribute('data-live');
+      if (!(k in BASE)) return;
+      el.textContent = Math.floor((BASE[k] + PER_DAY[k] * days) / 1000) + 'K+';
+    });
+  })();
+
+  /* in-page links: scroll there ourselves, so they also work inside framed previews */
+  var menu = document.getElementById('menu');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    e.preventDefault();
+    if (!menu.hidden) setMenu(false);
+    if (id === 'top') window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    else target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  /* nav background on scroll */
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('is-scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* mobile menu */
+  var toggle = document.querySelector('.nav .nav__toggle');
+  function setMenu(open){
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  toggle.addEventListener('click', function(){ setMenu(true); });
+  menu.querySelector('[data-close]').addEventListener('click', function(){ setMenu(false); toggle.focus(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !menu.hidden) setMenu(false); });
+
+  /* run a draw loop only while its element is on screen */
+  function whileVisible(el, start, stop){
+    if (reduce || !('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function(entries){ entries[0].isIntersecting ? start() : stop(); }).observe(el);
+  }
+
+  /* hero: the rising wave — a steady climb with small swells — and a red playhead riding it */
+  var canvas = document.querySelector('.hero__wave');
+  if (canvas && canvas.getContext){
+    var ctx = canvas.getContext('2d'), W = 0, H = 0, running = false, raf = 0, t0 = performance.now();
+    function size(){
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = canvas.clientWidth; H = canvas.clientHeight;
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function yAt(p, phase){
+      var base = H * (0.88 - 0.34 * p);
+      var amp = H * (0.008 + 0.012 * p);
+      var waves = W < 700 ? 6 : 13;  /* fewer swells on narrow screens so it stays smooth */
+      return base - amp * Math.sin(p * Math.PI * waves - Math.PI / 2 - phase);
+    }
+    function line(phase, alpha, width, glow){
+      ctx.beginPath();
+      for (var x = 0; x <= W; x += 3){
+        var y = yAt(x / W, phase);
+        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      var g = ctx.createLinearGradient(0, 0, W, 0);
+      g.addColorStop(0, 'rgba(110,110,110,' + alpha + ')');
+      g.addColorStop(.4, 'rgba(236,236,236,' + alpha + ')');
+      g.addColorStop(.65, 'rgba(150,150,150,' + alpha + ')');
+      g.addColorStop(1, 'rgba(252,252,252,' + alpha + ')');
+      ctx.strokeStyle = g;
+      ctx.lineWidth = width;
+      ctx.shadowColor = 'rgba(255,255,255,.35)';
+      ctx.shadowBlur = glow;
+      ctx.stroke();
+    }
+    function draw(now){
+      var t = (now - t0) / 1000;
+      var phase = reduce ? 0 : t * 0.9;
+      ctx.clearRect(0, 0, W, H);
+      line(phase + 0.9, 0.14, 1, 0);
+      line(phase, 0.8, 1.6, 10);
+      var p = reduce ? 0.62 : (t * 0.045) % 1;
+      var px = p * W, py = yAt(p, phase);
+      ctx.shadowBlur = 14; ctx.shadowColor = 'rgba(200,20,10,.9)';
+      ctx.fillStyle = '#c8140a';
+      ctx.beginPath(); ctx.arc(px, py, 3.5, 0, Math.PI * 2); ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+    function loop(now){ draw(now); if (running) raf = requestAnimationFrame(loop); }
+    size(); draw(performance.now());
+    window.addEventListener('resize', function(){ size(); draw(performance.now()); });
+    whileVisible(canvas,
+      function(){ if (!running){ running = true; raf = requestAnimationFrame(loop); } },
+      function(){ running = false; cancelAnimationFrame(raf); });
+  }
+
+  /* dot field: the Sinners Culture store's sc-dotfield, same settings and look.
+     A grey dot grid, lighter at the top, that bulges away from the pointer and fades out at the top and bottom edges.
+     Each row is drawn as one path (one fill per row), only the rows on or near the screen are redrawn,
+     and a section's canvas only exists while it is near the screen. */
+  (function(){
+    var SP = 14, R = 1.5, BASE_A = 0.25, CR = 660, BULGE = 67, FORCE = 0.10, TAU = 6.2831853;
+    var FROM = [160,160,160], TO = [112,112,112];          /* #a0a0a0 at the top to #707070 at the bottom */
+    var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
+    var cx = -99999, cy = -99999, last = 0, scrolled = 0;    /* pointer, in viewport coordinates */
+    function point(x, y){ cx = x; cy = y; last = performance.now(); }
+    function clearPt(){ cx = -99999; cy = -99999; last = performance.now(); }
+    if (!reduce && !touch){
+      window.addEventListener('mousemove', function(e){ point(e.clientX, e.clientY); }, {passive:true});
+      document.addEventListener('mouseleave', clearPt);
+    } else if (!reduce){
+      window.addEventListener('touchstart', function(e){ if (e.touches[0]) point(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+      window.addEventListener('touchmove', function(e){ if (e.touches[0]) point(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
+      window.addEventListener('touchend', clearPt, {passive:true});
+      window.addEventListener('touchcancel', clearPt, {passive:true});
+    }
+    /* on scroll, redraw the rows coming into view (and keep the bulge under the pointer) */
+    window.addEventListener('scroll', function(){ last = scrolled = performance.now(); }, {passive:true});
+    function field(host){
+      var cv = document.createElement('canvas');
+      cv.className = 'dotfield'; cv.setAttribute('aria-hidden', 'true');
+      host.insertBefore(cv, host.firstChild);
+      var ctx = cv.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2);
+      var W = 0, H = 0, drew = false, on = false, id = 0;
+      var logo = host.querySelector('[data-dot-exclude]'), exX = 0, exY = 0, exR = 0, exBand = 70;
+      function size(){
+        W = host.clientWidth; H = host.clientHeight;
+        cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        if (logo){
+          var hr = host.getBoundingClientRect(), lr = logo.getBoundingClientRect();
+          exX = lr.left - hr.left + lr.width / 2; exY = lr.top - hr.top + lr.height / 2; exR = lr.height * 0.42;
+        }
+        drew = false;
+      }
+      function draw(full){
+        var r = host.getBoundingClientRect(), mx = cx - r.left, my = cy - r.top, live = !reduce && cx > -9999;
+        var FADE = Math.min(180, H * 0.28), soft = [];
+        /* rows to redraw: the whole field once, then the visible band (wider while scrolling, so rows are ready before they show) */
+        var M = full ? 1e9 : (performance.now() - scrolled < 300 ? 420 : 40);
+        var y0 = Math.max(0, -r.top - M), y1 = Math.min(H, -r.top + window.innerHeight + M);
+        if (y1 <= y0){ drew = true; return; }
+        y0 = Math.floor((y0 - SP / 2) / SP) * SP + SP / 2; if (y0 < SP / 2) y0 = SP / 2;
+        ctx.clearRect(0, y0 - SP / 2, W, y1 - y0 + SP);
+        for (var y = y0; y < y1; y += SP){
+          var edge = y < FADE ? y / FADE : (y > H - FADE ? (H - y) / FADE : 1);
+          var a = BASE_A * (edge < 0 ? 0 : edge);
+          if (a <= 0.004) continue;
+          var t = y / H, rgb = ((FROM[0] + (TO[0] - FROM[0]) * t) | 0) + ',' + ((FROM[1] + (TO[1] - FROM[1]) * t) | 0) + ',' + ((FROM[2] + (TO[2] - FROM[2]) * t) | 0);
+          var dy = y - my, near = live && Math.abs(dy) < CR;
+          ctx.beginPath();
+          for (var x = SP / 2; x < W; x += SP){
+            var px = x, py = y, rad = R;
+            if (near){
+              var dx = x - mx, dist = Math.sqrt(dx * dx + dy * dy);
+              if (dist < CR){
+                var f = 1 - dist / CR, push = BULGE * f * FORCE, inv = 1 / (dist || 1);
+                px += dx * inv * push; py += dy * inv * push; rad = R + R * 0.6 * f;
+              }
+            }
+            if (exR > 0){
+              var lx = x - exX, ly = y - exY, ld = Math.sqrt(lx * lx + ly * ly);
+              if (ld < exR) continue;
+              if (ld < exR + exBand){ soft.push(px, py, rad, a * (ld - exR) / exBand, rgb); continue; }
+            }
+            ctx.moveTo(px + rad, py); ctx.arc(px, py, rad, 0, TAU);
+          }
+          ctx.fillStyle = 'rgba(' + rgb + ',' + a.toFixed(3) + ')';
+          ctx.fill();
+        }
+        for (var i = 0; i < soft.length; i += 5){  /* the few dots fading out around the footer logo */
+          ctx.beginPath(); ctx.arc(soft[i], soft[i + 1], soft[i + 2], 0, TAU);
+          ctx.fillStyle = 'rgba(' + soft[i + 4] + ',' + soft[i + 3].toFixed(3) + ')'; ctx.fill();
+        }
+        drew = true;
+      }
+      function frame(){
+        if (!drew) draw(true); else if (performance.now() - last < 280) draw(false);
+        if (on && !reduce) id = requestAnimationFrame(frame);
+      }
+      function start(){ if (on) return; on = true; size(); id = requestAnimationFrame(frame); }
+      function stop(){ if (!on) return; on = false; cancelAnimationFrame(id); cv.width = cv.height = 0; }  /* free the canvas memory */
+      if ('ResizeObserver' in window) new ResizeObserver(function(){ if (on){ size(); if (reduce) draw(true); } }).observe(host);
+      else window.addEventListener('resize', function(){ if (on){ size(); if (reduce) draw(true); } });
+      return { host: host, start: start, stop: stop };
+    }
+    var fields = Array.prototype.map.call(document.querySelectorAll('.dotfield-host'), field);
+    if (!('IntersectionObserver' in window)){ fields.forEach(function(f){ f.start(); }); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ var f = fields.filter(function(x){ return x.host === e.target; })[0]; e.isIntersecting ? f.start() : f.stop(); });
+    }, {rootMargin:'200px 0px'});
+    fields.forEach(function(f){ io.observe(f.host); });
+  })();
+
+  /* sonar buttons: the red radar sweep from the Sinners Culture store */
+  document.querySelectorAll('.btn--sonar').forEach(function(btn){
+    var cnv = btn.querySelector('canvas'); if (!cnv || !cnv.getContext) return;
+    var x = cnv.getContext('2d'), ang = 0, on = false, id = 0;
+    function rz(){ var r = btn.getBoundingClientRect(); cnv.width = Math.max(1, Math.round(r.width)); cnv.height = Math.max(1, Math.round(r.height)); }
+    function dr(){
+      var w = cnv.width, h = cnv.height, cx = w / 2, cy = h / 2, mr = Math.sqrt(cx * cx + cy * cy), s = ang * Math.PI / 180;
+      x.clearRect(0, 0, w, h);
+      for (var i = 0; i < 60; i++){
+        var a = s - i * Math.PI / 90;
+        x.beginPath(); x.moveTo(cx, cy); x.lineTo(cx + mr * Math.cos(a), cy + mr * Math.sin(a));
+        x.strokeStyle = 'rgba(200,20,10,' + ((1 - i / 60) * 0.8) + ')'; x.lineWidth = 2; x.stroke();
+      }
+      ang = (ang + 1) % 360;
+      if (on) id = requestAnimationFrame(dr);
+    }
+    rz(); dr();
+    window.addEventListener('resize', rz);
+    whileVisible(btn, function(){ if (!on){ on = true; id = requestAnimationFrame(dr); } }, function(){ on = false; cancelAnimationFrame(id); });
+  });
+
+  /* set chart: measure the curve, draw it in when it scrolls into view */
+  var chart = document.getElementById('setChart');
+  var curve = chart && chart.querySelector('.curve');
+  if (curve && curve.getTotalLength){ curve.style.setProperty('--len', Math.ceil(curve.getTotalLength())); }
+  if (chart){
+    if ('IntersectionObserver' in window && !reduce){
+      var io = new IntersectionObserver(function(entries){
+        if (!entries[0].isIntersecting) return;
+        chart.classList.add('is-drawn');
+        io.disconnect();
+      }, {threshold:0.2});
+      io.observe(chart);
+    } else {
+      chart.classList.add('is-drawn');
+    }
+  }
+
+  /* Spotify: load the player in-page on press (framed previews just follow the link) */
+  var framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
+  document.querySelectorAll('[data-spotify]').forEach(function(el){
+    var btn = el.querySelector('.play');
+    if (!btn || framed) return;
+    btn.addEventListener('click', function(ev){
+      ev.preventDefault();
+      var f = document.createElement('iframe');
+      f.src = 'https://open.spotify.com/embed/track/' + el.getAttribute('data-spotify') + '?utm_source=generator&theme=0';
+      f.title = 'Spotify player';
+      f.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+      f.loading = 'lazy';
+      el.innerHTML = '';
+      el.appendChild(f);
+    });
+  });
+
+  /* background loops: the poster shows straight away; each loop starts once the page has loaded and it is
+     near the screen, and pauses when scrolled away. Nothing plays for people who ask for reduced motion. */
+  function startLoops(){
+    var vids = Array.prototype.slice.call(document.querySelectorAll('video[data-auto]'));
+    function play(v){ if (v.preload !== 'auto') v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+    if (!('IntersectionObserver' in window)){ vids.forEach(play); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) play(e.target); else e.target.pause(); });
+    }, {rootMargin:'400px 0px'});
+    vids.forEach(function(v){ io.observe(v); });
+  }
+  if (!reduce){
+    if (document.readyState === 'complete') startLoops(); else window.addEventListener('load', startLoops);
+  }
+
+  /* live footage player: one stage, a playlist, auto-advance */
+  var stage = document.getElementById('reelStage');
+  if (stage){
+    var video = document.getElementById('reelVideo');
+    var items = Array.prototype.slice.call(document.querySelectorAll('.reel__item'));
+    var title = document.getElementById('reelTitle');
+    var venue = document.getElementById('reelVenue');
+    var current = 0;
+    function load(i, autoplay){
+      current = i;
+      var it = items[i];
+      items.forEach(function(b){ b.classList.toggle('is-active', b === it); });
+      title.textContent = it.querySelector('.t').textContent;
+      venue.textContent = 'Now playing · ' + (it.getAttribute('data-venue') || 'Club Vaag');
+      video.poster = it.getAttribute('data-poster');
+      video.src = it.getAttribute('data-src');
+      if (autoplay){ play(); } else { stage.classList.remove('is-playing'); video.controls = false; }
+    }
+    function play(){
+      stage.classList.add('is-playing');
+      video.controls = true;
+      var p = video.play(); if (p && p.catch) p.catch(function(){});
+    }
+    stage.querySelector('.reel__play').addEventListener('click', play);
+    document.querySelectorAll('[data-clip]').forEach(function(a){
+      a.addEventListener('click', function(){ load(+a.getAttribute('data-clip'), false); });
+    });
+    items.forEach(function(b, i){ b.addEventListener('click', function(){ load(i, true); }); });
+    video.addEventListener('ended', function(){ load((current + 1) % items.length, true); });
+  }
+
+  /* press photos: open full size in an in-page viewer, with a real download.
+     In the claude.ai preview the file is handed over through its "downloads" permission;
+     on the live site it is a normal download. Right-click / long-press on the photo works everywhere. */
+  var lb = document.getElementById('lightbox');
+  var shots = Array.prototype.slice.call(document.querySelectorAll('.shot'));
+  if (lb && shots.length && lb.showModal){
+    var lbImg = lb.querySelector('img'), lbName = lb.querySelector('.lightbox__name'), at = 0;
+    var saver = (window.claude && window.claude.use) ? window.claude.use('downloads').catch(function(){ return null; }) : Promise.resolve(null);
+    function show(i){
+      at = (i + shots.length) % shots.length;
+      var s = shots[at];
+      lbImg.src = s.getAttribute('href');
+      lbImg.alt = 'lucavanrøssem, ' + s.getAttribute('aria-label').toLowerCase();
+      lbImg.classList.toggle('is-cut', s.classList.contains('shot--cut'));
+      lbName.textContent = (at + 1) + ' / ' + shots.length;
+    }
+    shots.forEach(function(s, i){
+      s.addEventListener('click', function(e){ e.preventDefault(); show(i); lb.showModal(); });
+    });
+    lb.querySelectorAll('[data-step]').forEach(function(b){ b.addEventListener('click', function(){ show(at + +b.getAttribute('data-step')); }); });
+    lb.querySelector('[data-close-lightbox]').addEventListener('click', function(){ lb.close(); });
+    lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
+    lb.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight') show(at + 1); else if (e.key === 'ArrowLeft') show(at - 1); });
+    lb.addEventListener('close', function(){ lbImg.removeAttribute('src'); });
+    lb.querySelector('[data-download]').addEventListener('click', function(){
+      var s = shots[at], url = s.getAttribute('href'), name = s.getAttribute('data-name');
+      saver.then(function(dl){
+        if (!dl){  /* ordinary website: a plain download link */
+          var a = document.createElement('a'); a.href = url; a.download = name;
+          document.body.appendChild(a); a.click(); a.remove(); return;
+        }
+        return fetch(url).then(function(r){ return r.blob(); }).then(function(blob){ return dl.save({ filename: name, data: blob }); }).catch(function(){});
+      });
+    });
+  }
+
+  /* booking mails, pre-filled with the address(es), subject and message.
+     Computers: Gmail in the browser (plus a mail-app link).
+     iPhone: the button opens the Gmail app itself; the link under it uses the phone's mail app instead.
+     Android: the button opens the mail app (Gmail on most Android phones); the link under it copies the address.
+     (Gmail's web link can't be used on phones: the Gmail app drops the address and text when it takes it over.) */
+  (function(){
+    var ua = navigator.userAgent || '';
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var android = /Android/.test(ua);
+    if (!(ios || android)) return;  /* computers keep Gmail in the browser */
+    var enc = encodeURIComponent;
+    function copy(text, done){
+      try { navigator.clipboard.writeText(text).then(done, function(){}); } catch (err) {}
+    }
+    document.querySelectorAll('.contact__cta[data-to]').forEach(function(box){
+      var to = box.getAttribute('data-to'), su = box.getAttribute('data-subject'), body = box.getAttribute('data-body');
+      var main = box.querySelector('[data-mail="main"]'), alt = box.querySelector('[data-mail="alt"]');
+      var mailto = 'mailto:' + to + '?subject=' + enc(su) + '&body=' + enc(body).replace(/%0A/g, '%0D%0A');
+      var gmail = 'googlegmail:///co?to=' + enc(to) + '&subject=' + enc(su) + '&body=' + enc(body);
+      function open(a, url){ a.href = url; if (framed) a.target = '_blank'; else a.removeAttribute('target'); }
+      if (ios){
+        open(main, gmail);
+        open(alt, mailto);
+        alt.textContent = 'No Gmail? Use your mail app';
+      } else {
+        open(main, mailto);
+        alt.href = '#'; alt.removeAttribute('target');
+        alt.textContent = 'Or copy the address';
+        alt.addEventListener('click', function(e){
+          e.preventDefault();
+          copy(to.replace(/,/g, ', '), function(){ alt.textContent = 'Copied'; setTimeout(function(){ alt.textContent = 'Or copy the address'; }, 1800); });
+        });
+      }
+      /* the claude.ai preview can be blocked from opening other apps; there, offer the finished mail to copy instead */
+      if (framed){
+        main.addEventListener('click', function(){
+          if (box.querySelector('.contact__note')) return;
+          var note = document.createElement('p');
+          note.className = 'contact__note';
+          note.innerHTML = 'The Claude preview can’t open Gmail, so nothing happens here. On the live website this button opens Gmail with the address and the booking mail already filled in. <button type="button" class="btn">Copy the mail</button>';
+          note.querySelector('button').addEventListener('click', function(){
+            var b = this;
+            copy('To: ' + to.replace(/,/g, ', ') + '\nSubject: ' + su + '\n\n' + body, function(){ b.textContent = 'Copied'; });
+          });
+          box.appendChild(note);
+        });
+      }
+    });
+  })();
+
+  /* copy short bio */
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var el = document.getElementById(btn.getAttribute('data-copy'));
+      var text = el.textContent.trim();
+      var done = function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy bio'; }, 1800); };
+      function select(){ var r = document.createRange(); r.selectNodeContents(el); var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); btn.textContent = 'Selected, press copy'; }
+      try { navigator.clipboard.writeText(text).then(done, select); } catch (e) { select(); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
