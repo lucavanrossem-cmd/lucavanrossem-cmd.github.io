@@ -1194,8 +1194,8 @@ html.js .set.is-drawn .area{opacity:1}
 
   /* booking mails, pre-filled with the address(es), subject and message.
      Computers: Gmail in the browser (plus a mail-app link).
-     iPhone: the button opens the Gmail app itself; the link under it uses the phone's mail app instead.
-     Android: the button opens the mail app (Gmail on most Android phones); the link under it copies the address.
+     iPhone: the button opens the Gmail app itself. Android: the button opens the mail app (Gmail on most Android phones).
+     On both, "No Gmail? Copy email" under the button copies the address(es).
      (Gmail's web link can't be used on phones: the Gmail app drops the address and text when it takes it over.) */
   (function(){
     var ua = navigator.userAgent || '';
@@ -1204,7 +1204,13 @@ html.js .set.is-drawn .area{opacity:1}
     if (!(ios || android)) return;  /* computers keep Gmail in the browser */
     var enc = encodeURIComponent;
     function copy(text, done){
-      try { navigator.clipboard.writeText(text).then(done, function(){}); } catch (err) {}
+      function fallback(){  /* older browsers / blocked clipboard: copy through a hidden text field */
+        var t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', '');
+        t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select();
+        try { if (document.execCommand('copy')) done(); } catch (err) {}
+        t.remove();
+      }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (err) { fallback(); }
     }
     document.querySelectorAll('.contact__cta[data-to]').forEach(function(box){
       var to = box.getAttribute('data-to'), su = box.getAttribute('data-subject'), body = box.getAttribute('data-body');
@@ -1212,19 +1218,14 @@ html.js .set.is-drawn .area{opacity:1}
       var mailto = 'mailto:' + to + '?subject=' + enc(su) + '&body=' + enc(body).replace(/%0A/g, '%0D%0A');
       var gmail = 'googlegmail:///co?to=' + enc(to) + '&subject=' + enc(su) + '&body=' + enc(body);
       function open(a, url){ a.href = url; if (framed) a.target = '_blank'; else a.removeAttribute('target'); }
-      if (ios){
-        open(main, gmail);
-        open(alt, mailto);
-        alt.textContent = 'No Gmail? Use your mail app';
-      } else {
-        open(main, mailto);
-        alt.href = '#'; alt.removeAttribute('target');
-        alt.textContent = 'Or copy the address';
-        alt.addEventListener('click', function(e){
-          e.preventDefault();
-          copy(to.replace(/,/g, ', '), function(){ alt.textContent = 'Copied'; setTimeout(function(){ alt.textContent = 'Or copy the address'; }, 1800); });
-        });
-      }
+      open(main, ios ? gmail : mailto);
+      /* the line under the button: copy the email address(es) */
+      alt.href = '#'; alt.removeAttribute('target');
+      alt.textContent = 'No Gmail? Copy email';
+      alt.addEventListener('click', function(e){
+        e.preventDefault();
+        copy(to.replace(/,/g, ', '), function(){ alt.textContent = 'Email copied'; setTimeout(function(){ alt.textContent = 'No Gmail? Copy email'; }, 1800); });
+      });
       /* the claude.ai preview can be blocked from opening other apps; there, offer the finished mail to copy instead */
       if (framed){
         main.addEventListener('click', function(){
