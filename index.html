@@ -109,7 +109,7 @@ section[id]{scroll-margin-top:68px}
 
 /* ---------- dot field (ported from the Sinners Culture store) ---------- */
 .dotfield-host{position:relative;isolation:isolate}
-.dotfield{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;mix-blend-mode:lighten}
+.dotfield{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .dotfield-host > :not(.dotfield){position:relative;z-index:1}
 
 /* ---------- buttons (white solid, or black with a steel glow and the red radar sweep) ---------- */
@@ -164,6 +164,7 @@ section[id]{scroll-margin-top:68px}
 .scroll-cue{display:flex;flex-direction:column;align-items:center;gap:8px}
 .scroll-cue i{display:block;width:1px;height:28px;background:linear-gradient(var(--white),transparent);animation:cue 2s ease-in-out infinite}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hero.is-off .dot,.hero.is-off .scroll-cue i{animation-play-state:paused}
 @media (max-width:760px){
   .hero__inner{padding:64px var(--gutter) 96px}
   .hero__genre{font-size:10px;letter-spacing:.12em}
@@ -198,10 +199,6 @@ section[id]{scroll-margin-top:68px}
 .release__art img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .release__art:hover img{transform:scale(1.025)}
 .release__art iframe{width:100%;height:100%;border:0}
-.play{position:absolute;z-index:2;right:14px;bottom:14px;display:inline-flex;align-items:center;padding:5px;border:0;border-radius:999px;background:rgba(0,0,0,.74);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--white);cursor:pointer;transition:background .2s}
-.play:hover{background:rgba(0,0,0,.92)}
-.play__icon{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--white);color:#000}
-.play__icon svg{width:13px;height:13px;margin-left:2px}
 .release{container-type:inline-size}
 .release__body{padding-top:18px}
 .release__top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;white-space:nowrap}
@@ -514,11 +511,8 @@ html.js .set.is-drawn .area{opacity:1}
 
     <div class="releases">
       <article class="release">
-        <div class="release__art chrome-edge" data-spotify="5ClOSHZvQ22XSk1m1ArT55">
+        <div class="release__art chrome-edge">
           <img src="assets/covers/as-mean-as-they-come.webp" alt="AS MEAN AS THEY COME cover art, lucavanrøssem and JRD, Sinners Records SNR005" width="1000" height="1000" loading="lazy" decoding="async">
-          <a class="play" href="https://open.spotify.com/track/5ClOSHZvQ22XSk1m1ArT55" target="_blank" rel="noopener" aria-label="Play AS MEAN AS THEY COME on Spotify">
-            <span class="play__icon"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
-          </a>
         </div>
         <div class="release__body">
           <div class="release__top"><span class="pill label">Latest · #SNR005</span><span class="release__stat label"><b data-live="amatc">25K+</b> streams</span></div>
@@ -533,11 +527,8 @@ html.js .set.is-drawn .area{opacity:1}
       </article>
 
       <article class="release">
-        <div class="release__art chrome-edge" data-spotify="65KfWhFsKbskiKIICnDQDH">
+        <div class="release__art chrome-edge">
           <img src="assets/covers/never-gave-a-fxck.webp" alt="NEVER GAVE A FXCK cover art, lucavanrøssem, Sinners Records SNR001" width="1000" height="1000" loading="lazy" decoding="async">
-          <a class="play" href="https://open.spotify.com/track/65KfWhFsKbskiKIICnDQDH" target="_blank" rel="noopener" aria-label="Play NEVER GAVE A FXCK on Spotify">
-            <span class="play__icon"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
-          </a>
         </div>
         <div class="release__body">
           <div class="release__top"><span class="pill pill--ghost label">Debut · #SNR001</span><span class="release__stat label"><b data-live="ngaf">575K+</b> streams</span></div>
@@ -951,7 +942,11 @@ html.js .set.is-drawn .area{opacity:1}
       ctx.beginPath(); ctx.arc(px, py, 3.5, 0, Math.PI * 2); ctx.fill();
       ctx.shadowBlur = 0;
     }
-    function loop(now){ draw(now); if (running) raf = requestAnimationFrame(loop); }
+    var drawn = 0;
+    function loop(now){
+      if (now - drawn >= 12){ drawn = now; draw(now); }  /* at most ~60 frames a second, also on 120/144 Hz screens */
+      if (running) raf = requestAnimationFrame(loop);
+    }
     size(); draw(performance.now());
     window.addEventListener('resize', function(){ size(); draw(performance.now()); });
     whileVisible(canvas,
@@ -959,34 +954,39 @@ html.js .set.is-drawn .area{opacity:1}
       function(){ running = false; cancelAnimationFrame(raf); });
   }
 
+  /* hero pulse dot + scroll cue: CSS loops, paused while the hero is off screen */
+  var hero = document.querySelector('.hero');
+  if (hero && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){ hero.classList.toggle('is-off', !entries[0].isIntersecting); }).observe(hero);
+  }
+
   /* dot field: the Sinners Culture store's sc-dotfield, same settings and look.
      A grey dot grid, lighter at the top, that bulges away from the pointer and fades out at the top and bottom edges.
      Each row is drawn as one path (one fill per row), only the rows on or near the screen are redrawn,
-     and a section's canvas only exists while it is near the screen. */
+     and a section's canvas only exists while it is near the screen.
+     It only redraws while the pointer moves or the page scrolls; the rest of the time it sleeps.
+     Phones and tablets: the field stays still (following a finger looked odd while scrolling) and is drawn once. */
   (function(){
     var SP = 14, R = 1.5, BASE_A = 0.25, CR = 660, BULGE = 67, FORCE = 0.10, TAU = 6.2831853;
     var FROM = [160,160,160], TO = [112,112,112];          /* #a0a0a0 at the top to #707070 at the bottom */
     var touch = window.matchMedia && window.matchMedia('(hover: none)').matches;
     var cx = -99999, cy = -99999, last = 0, scrolled = 0;    /* pointer, in viewport coordinates */
-    function point(x, y){ cx = x; cy = y; last = performance.now(); }
-    function clearPt(){ cx = -99999; cy = -99999; last = performance.now(); }
+    var fields = [];
+    function wake(){ for (var i = 0; i < fields.length; i++) fields[i].wake(); }
+    function point(x, y){ cx = x; cy = y; last = performance.now(); wake(); }
+    function clearPt(){ cx = -99999; cy = -99999; last = performance.now(); wake(); }
     if (!reduce && !touch){
       window.addEventListener('mousemove', function(e){ point(e.clientX, e.clientY); }, {passive:true});
       document.addEventListener('mouseleave', clearPt);
-    } else if (!reduce){
-      window.addEventListener('touchstart', function(e){ if (e.touches[0]) point(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
-      window.addEventListener('touchmove', function(e){ if (e.touches[0]) point(e.touches[0].clientX, e.touches[0].clientY); }, {passive:true});
-      window.addEventListener('touchend', clearPt, {passive:true});
-      window.addEventListener('touchcancel', clearPt, {passive:true});
+      /* on scroll, keep the bulge under the pointer */
+      window.addEventListener('scroll', function(){ last = scrolled = performance.now(); wake(); }, {passive:true});
     }
-    /* on scroll, redraw the rows coming into view (and keep the bulge under the pointer) */
-    window.addEventListener('scroll', function(){ last = scrolled = performance.now(); }, {passive:true});
     function field(host){
       var cv = document.createElement('canvas');
       cv.className = 'dotfield'; cv.setAttribute('aria-hidden', 'true');
       host.insertBefore(cv, host.firstChild);
       var ctx = cv.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2);
-      var W = 0, H = 0, drew = false, on = false, id = 0;
+      var W = 0, H = 0, drew = false, on = false, id = 0, ticking = false;
       var logo = host.querySelector('[data-dot-exclude]'), exX = 0, exY = 0, exR = 0, exBand = 70;
       function size(){
         W = host.clientWidth; H = host.clientHeight;
@@ -1040,16 +1040,19 @@ html.js .set.is-drawn .area{opacity:1}
         drew = true;
       }
       function frame(){
+        ticking = false;
+        if (!on) return;
         if (!drew) draw(true); else if (performance.now() - last < 280) draw(false);
-        if (on && !reduce) id = requestAnimationFrame(frame);
+        if (performance.now() - last < 280) wake();  /* keep going while the pointer moves or the page scrolls */
       }
-      function start(){ if (on) return; on = true; size(); id = requestAnimationFrame(frame); }
-      function stop(){ if (!on) return; on = false; cancelAnimationFrame(id); cv.width = cv.height = 0; }  /* free the canvas memory */
-      if ('ResizeObserver' in window) new ResizeObserver(function(){ if (on){ size(); if (reduce) draw(true); } }).observe(host);
-      else window.addEventListener('resize', function(){ if (on){ size(); if (reduce) draw(true); } });
-      return { host: host, start: start, stop: stop };
+      function wake(){ if (on && !ticking){ ticking = true; id = requestAnimationFrame(frame); } }
+      function start(){ if (on) return; on = true; size(); wake(); }
+      function stop(){ if (!on) return; on = false; ticking = false; cancelAnimationFrame(id); cv.width = cv.height = 0; }  /* free the canvas memory */
+      if ('ResizeObserver' in window) new ResizeObserver(function(){ if (on){ size(); wake(); } }).observe(host);
+      else window.addEventListener('resize', function(){ if (on){ size(); wake(); } });
+      return { host: host, start: start, stop: stop, wake: wake };
     }
-    var fields = Array.prototype.map.call(document.querySelectorAll('.dotfield-host'), field);
+    fields = Array.prototype.map.call(document.querySelectorAll('.dotfield-host'), field);
     if (!('IntersectionObserver' in window)){ fields.forEach(function(f){ f.start(); }); return; }
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ var f = fields.filter(function(x){ return x.host === e.target; })[0]; e.isIntersecting ? f.start() : f.stop(); });
@@ -1060,16 +1063,24 @@ html.js .set.is-drawn .area{opacity:1}
   /* sonar buttons: the red radar sweep from the Sinners Culture store */
   document.querySelectorAll('.btn--sonar').forEach(function(btn){
     var cnv = btn.querySelector('canvas'); if (!cnv || !cnv.getContext) return;
-    var x = cnv.getContext('2d'), ang = 0, on = false, id = 0;
-    function rz(){ var r = btn.getBoundingClientRect(); cnv.width = Math.max(1, Math.round(r.width)); cnv.height = Math.max(1, Math.round(r.height)); }
-    function dr(){
-      var w = cnv.width, h = cnv.height, cx = w / 2, cy = h / 2, mr = Math.sqrt(cx * cx + cy * cy), s = ang * Math.PI / 180;
-      x.clearRect(0, 0, w, h);
+    var x = cnv.getContext('2d'), ang = 0, on = false, id = 0, sweep = null;
+    function rz(){ var r = btn.getBoundingClientRect(); cnv.width = Math.max(1, Math.round(r.width)); cnv.height = Math.max(1, Math.round(r.height)); sweep = null; }
+    function paint(){  /* the sweep's 60 lines, drawn once per button size; each frame only turns it */
+      var w = cnv.width, h = cnv.height, mr = Math.sqrt(w * w + h * h) / 2, c = Math.ceil(mr) + 2;
+      sweep = document.createElement('canvas'); sweep.width = sweep.height = c * 2;
+      var g = sweep.getContext('2d');
       for (var i = 0; i < 60; i++){
-        var a = s - i * Math.PI / 90;
-        x.beginPath(); x.moveTo(cx, cy); x.lineTo(cx + mr * Math.cos(a), cy + mr * Math.sin(a));
-        x.strokeStyle = 'rgba(200,20,10,' + ((1 - i / 60) * 0.8) + ')'; x.lineWidth = 2; x.stroke();
+        var a = -i * Math.PI / 90;
+        g.beginPath(); g.moveTo(c, c); g.lineTo(c + mr * Math.cos(a), c + mr * Math.sin(a));
+        g.strokeStyle = 'rgba(200,20,10,' + ((1 - i / 60) * 0.8) + ')'; g.lineWidth = 2; g.stroke();
       }
+    }
+    function dr(){
+      if (!sweep) paint();
+      var w = cnv.width, h = cnv.height, c = sweep.width / 2;
+      x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, w, h);
+      x.translate(w / 2, h / 2); x.rotate(ang * Math.PI / 180); x.drawImage(sweep, -c, -c);
+      x.setTransform(1, 0, 0, 1, 0, 0);
       ang = (ang + 1) % 360;
       if (on) id = requestAnimationFrame(dr);
     }
@@ -1095,31 +1106,25 @@ html.js .set.is-drawn .area{opacity:1}
     }
   }
 
-  /* Spotify: load the player in-page on press (framed previews just follow the link) */
+  /* framed previews (e.g. claude.ai) can't open other apps; the booking mails check this */
   var framed = false; try { framed = window.self !== window.top; } catch (e) { framed = true; }
-  document.querySelectorAll('[data-spotify]').forEach(function(el){
-    var btn = el.querySelector('.play');
-    if (!btn || framed) return;
-    btn.addEventListener('click', function(ev){
-      ev.preventDefault();
-      var f = document.createElement('iframe');
-      f.src = 'https://open.spotify.com/embed/track/' + el.getAttribute('data-spotify') + '?utm_source=generator&theme=0';
-      f.title = 'Spotify player';
-      f.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-      f.loading = 'lazy';
-      el.innerHTML = '';
-      el.appendChild(f);
-    });
-  });
 
   /* background loops: the poster shows straight away; each loop starts once the page has loaded and it is
      near the screen, and pauses when scrolled away. Nothing plays for people who ask for reduced motion. */
   function startLoops(){
-    var vids = Array.prototype.slice.call(document.querySelectorAll('video[data-auto]'));
-    function play(v){ if (v.preload !== 'auto') v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function(){}); }
-    if (!('IntersectionObserver' in window)){ vids.forEach(play); return; }
+    var vids = Array.prototype.slice.call(document.querySelectorAll('video[data-auto]')), near = [];
+    function play(v){ if (document.hidden) return; if (v.preload !== 'auto') v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+    /* another tab in front: pause the loops; back on this tab: pick up the ones near the screen */
+    document.addEventListener('visibilitychange', function(){
+      vids.forEach(function(v){ if (document.hidden) v.pause(); else if (near.indexOf(v) > -1) play(v); });
+    });
+    if (!('IntersectionObserver' in window)){ near = vids; vids.forEach(play); return; }
     var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if (e.isIntersecting) play(e.target); else e.target.pause(); });
+      entries.forEach(function(e){
+        var i = near.indexOf(e.target);
+        if (e.isIntersecting){ if (i < 0) near.push(e.target); play(e.target); }
+        else { if (i > -1) near.splice(i, 1); e.target.pause(); }
+      });
     }, {rootMargin:'400px 0px'});
     vids.forEach(function(v){ io.observe(v); });
   }
